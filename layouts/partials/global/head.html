@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{- $colors := .Site.Data.appearance.colors -}}
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- SCHEMA -->
+
+{{- if $.IsHome -}}
+{{ partial "global/schema" . }}
+{{- end -}}
+<style>
+    :root {
+        --primary-button-background: {{ $colors.button_background_color }};
+        --primary-button-text-color: {{ $colors.button_text_color }};
+        --primary-link-color: {{ $colors.links }};
+        --primary-accent-color: {{ $colors.accent }};
+        --idx-title-color: {{ $colors.idx_title_background_color }};
+        --idx-title-text-color: {{ $colors.idx_title_text_color }};
+    }
+</style>
+
+<script src="https://kestrel.idxhome.com/ihf-kestrel.js"></script>
+<script>
+	window.ihfKestrel = window.ihfKestrel || {};
+	ihfKestrel.config = {
+		platform: "",
+		activationToken: "3779C949-155D-6043-0911FD9A208A875D",
+	};
+</script>
+
+<!-- START SEO -->
+{{ partial "global/seo" . }}
+
+<!-- CUSTOM CSS -->
+{{ .Site.Data.developer.custom_css | safeHTML }}
+
+<!-- FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+<!-- STYLESHEETS AND RESOURCES-->
+<link rel="stylesheet" href="{{ .Site.BaseURL }}css/styles.css">
+{{ if $.Site.Data.idx.enable_idx }}
+    <link rel="stylesheet" href="{{.Site.BaseURL}}css/ihf_style.css">
+{{ end }}
+
+{{ if $.Site.Data.idx.enable_google_recaptcha }}
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+{{ end }}
+
+<!-- CUSTOM SCRIPT -->
+{{ .Site.Data.developer.custom_script | safeHTML }}
+
+<script src="https://kestrel.idxhome.com/ihf-kestrel.js"></script>
+<script>
+	window.ihfKestrel = window.ihfKestrel || {};
+	ihfKestrel.config = {
+		platform: "custom",
+		activationToken: "3779C949-155D-6043-0911FD9A208A875D",
+	};
+</script>
+
+</head>
+<body>

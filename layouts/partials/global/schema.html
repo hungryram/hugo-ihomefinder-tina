@@ -1,0 +1,46 @@
+{{ $profile := .Site.Data.profile }}
+{{ $appearance := .Site.Data.appearance }}
+<script type="application/ld+json"> {
+	"@context": "https:\/\/schema.org",
+	"@graph": [
+		{
+		"@type": "WebSite",
+		"url": "{{ .Site.BaseURL }}",
+		"name": "{{ $profile.company_name }}",
+		"potentialAction": {
+			"@type": "SearchAction",
+			"target": "{{ .Site.BaseURL }}?s={search_term_string}",
+			"query-input": "required name=search_term_string"
+		}
+	}, 
+    {
+		"@type": "RealEstateAgent",
+		"name": "{{ $profile.company_name }}",
+		"url": "{{ .Site.BaseURL }}",
+		"contactPoint":
+		[
+		  {
+			"@type":"ContactPoint",
+			"name":"work",
+			"email":"{{ $profile.contact_information.email }}",
+			"telephone":"{{ $profile.contact_information.cell }}"
+		  },
+		  {
+			"@type":"ContactPoint",
+			"name":"office",
+			"telephone":"{{ $profile.contact_information.phone }}"
+		  }
+		]
+		"address": {
+			"@type": "PostalAddress",
+			"streetAddress": "{{ $profile.contact_information.address }}",
+			"addressLocality": "{{ $profile.contact_information.city }}",
+			"addressRegion": "{{ $profile.contact_information.state }}",
+			"postalCode": "{{ $profile.contact_information.zip_code }}",
+			"addressCountry": "United States"
+		},
+		"image": "{{ $appearance.branding.logo | absURL }}"
+	}
+]
+} 
+</script>

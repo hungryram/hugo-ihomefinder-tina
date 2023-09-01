@@ -1,0 +1,12 @@
+{{ partial "global/head" }}
+{{ partial "global/navbar" }}
+
+{{ range .Params.home_sections }}
+
+    {{ if eq "text-and-image" .template }}
+    {{ partial "page-builder/call-to-action" (dict "sectionData" .) }}
+    {{ end }}
+
+{{ end }}
+
+{{ partial "global/footer" }}
