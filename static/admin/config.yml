@@ -28,48 +28,19 @@ collections:
                   - label: "Body"
                     name: "body"
                     widget: "markdown"
+                    required: false  # Make this field optional
                   - label: "Button"
                     name: "button"
                     widget: "string"
+                    required: false  # Make this field optional
                   - label: "Button Link"
                     name: "button_link"
                     widget: "string"
+                    required: false  # Make this field optional
                   - label: "Image"
                     name: "image"
                     widget: "image"
-              - label: "Active Listings Carousel"
-                name: "active-listings-carousel"
-                widget: "object"
-                fields:
-                  - label: "Heading"
-                    name: "heading"
-                    widget: "string"
-                  - label: "Body"
-                    name: "body"
-                    widget: "markdown"
-              - label: "Featured Boxes"
-                name: "featured-boxes"
-                widget: "object"
-                fields:
-                  - label: "Heading"
-                    name: "heading"
-                    widget: "string"
-                  - label: "Body"
-                    name: "body"
-                    widget: "markdown"
-                  - label: "Blocks"
-                    name: "blocks"
-                    widget: "list"
-                    fields:
-                      - label: "Heading"
-                        name: "heading"
-                        widget: "string"
-                      - label: "Image"
-                        name: "image"
-                        widget: "image"
-                      - label: "Link"
-                        name: "link"
-                        widget: "string"
+                    required: false  # Make this field optional
 
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
