@@ -9,19 +9,21 @@
 <!-- SCHEMA -->
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
+<style>
+    :root {
+        --primary-button-background: {{ .Site.Data.appearance.colors_primary_button_background_color }};
+        --primary-button-text-color: {{ .Site.Data.appearance.colors_primary_button_text_color }};
+        --primary-link-color: {{ .Site.Data.appearance.colors.links }};
+        --primary-accent-color: {{ .Site.Data.appearance.colors_accent }};
+        --idx-title-color: {{ .Site.Data.appearance.colors.idx_title_background_color }};
+        --idx-title-text-color: {{ .Site.Data.appearance.colors.idx_title_text_color }};
+    }
+</style>
+
+
 {{- if $.IsHome -}}
 {{ partial "global/schema" . }}
 {{- end -}}
-<style>
-    :root {
-        --primary-button-background: {{ .Site.Data.appearance.colors.primary_button_background_color }};
-        --primary-button-text-color: {{ $colors.primary_button_text_color }};
-        --primary-link-color: {{ $colors.links }};
-        --primary-accent-color: {{ $colors.accent }};
-        --idx-title-color: {{ $colors.idx_title_background_color }};
-        --idx-title-text-color: {{ $colors.idx_title_text_color }};
-    }
-</style>
 
 <script src="https://kestrel.idxhome.com/ihf-kestrel.js"></script>
 <script>
