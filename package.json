@@ -5,5 +5,8 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "netlify-cms-widget-colorpicker": "^1.0.3"
   }
 }
