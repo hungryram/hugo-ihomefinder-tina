@@ -1,5 +1,6 @@
 backend:
   name: git-gateway
+  local_backend: true
   branch: main # Branch to update (optional; defaults to master)
 # These lines should *not* be indented
 media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
@@ -11,7 +12,7 @@ collections:
     files:
       - name: "index"
         label: "Home Page"
-        file: "content/index.md"
+        file: "content/_index.md"
         fields:
           - label: "Home Sections"
             name: "home_sections"
@@ -22,25 +23,12 @@ collections:
                 name: "text-and-image"
                 widget: "object"
                 fields:
-                  - label: "Heading"
-                    name: "heading"
-                    widget: "string"
-                  - label: "Body"
-                    name: "body"
-                    widget: "markdown"
-                    required: false  # Make this field optional
-                  - label: "Button"
-                    name: "button"
-                    widget: "string"
-                    required: false  # Make this field optional
-                  - label: "Button Link"
-                    name: "button_link"
-                    widget: "string"
-                    required: false  # Make this field optional
-                  - label: "Image"
-                    name: "image"
-                    widget: "image"
-                    required: false  # Make this field optional
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Body", name: "body", widget: "markdown", required: false }
+                  - { label: "Button", name: "button", widget: "string", required: false }
+                  - { label: "Button Link", name: "button_link", widget: "string", required: false }
+                  - { label: "Image", name: "image", widget: "image", required: false }
+
 
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
