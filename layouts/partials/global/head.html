@@ -7,6 +7,7 @@
 {{- $colors := .Site.Data.appearance.colors -}}
 <script src="https://cdn.tailwindcss.com"></script>
 <!-- SCHEMA -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
 {{- if $.IsHome -}}
 {{ partial "global/schema" . }}
