@@ -46,6 +46,7 @@ collections:
                     name: "color"
                     widget: "color"
                     required: false  # Make this field optional
+                    enableAlpha: true
               - label: "Text and Image"
                 name: "text-and-image"
                 widget: "object"
