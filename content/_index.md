@@ -12,4 +12,5 @@ home_sections:
     image: /images/uploads/2-wyndam-selects-1-.jpg
     button: Get Started
     button_link: /contact
+    color: rgba(0, 0, 0, 0.6)
 ---
