@@ -38,15 +38,22 @@ collections:
                     name: "button_link"
                     widget: "string"
                     required: false  # Make this field optional
+                  - label: "Overlay Color"
+                    name: "overlayColor"
+                    widget: "color"
+                    required: false  # Make this field optional
+                    enableAlpha: true
+                  - label: "Heading Color"
+                    name: "headingColor"
+                    widget: "color"
+                  - label: "Body Color"
+                    name: "bodyColor"
+                    widget: "color"
+                    required: false  # Make this field optional
                   - label: "Image"
                     name: "image"
                     widget: "image"
                     required: false  # Make this field optional
-                  - label: "Color"
-                    name: "color"
-                    widget: "color"
-                    required: false  # Make this field optional
-                    enableAlpha: true
               - label: "Text and Image"
                 name: "text-and-image"
                 widget: "object"
