@@ -25,6 +25,7 @@ branding_logo_width: 200
 header_header_background_color: "#c4c4c4"
 colors_primary_button_background_color: "#1d92cf"
 colors_primary_button_text_color: "#ffffff"
+colors_accent: "#d21818"
 branding:
   site_title: null
   logo: null
