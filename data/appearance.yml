@@ -1,11 +1,11 @@
 branding:
-  site_title:
-  logo: 
+  site_title: null
+  logo: null
   favicon: /uploads/favicon.png
   logo_width: 125
 header:
-  top_header_color: '#070811'
-  header_background_color: '#ffffff'
+  top_header_color: "#070811"
+  header_background_color: "#ffffff"
   enable_white_text: true
   enable_white_text_top: true
   transparent_background: true
@@ -15,14 +15,15 @@ header:
 pages:
   image: /uploads/shutterstock-20129206822.jpg
 colors:
-  primary_button_background_color: '#3fb9be'
-  primary_button_text_color: '#ffffff'
-  accent: '#3fb9be'
-  idx_title_background_color: '#070811'
-  idx_title_text_color: '#ffffff'
+  primary_button_background_color: "#3fb9be"
+  primary_button_text_color: "#ffffff"
+  accent: "#3fb9be"
+  idx_title_background_color: "#070811"
+  idx_title_text_color: "#ffffff"
 form:
-  form_disclaimer: >-
-    By submitting the form with your information above you are agreeing to
-    our&nbsp;[Terms and
+  form_disclaimer: By submitting the form with your information above you are
+    agreeing to our&nbsp;[Terms and
     Conditions](/legal/terms-and-conditions/)&nbsp;and&nbsp;[Privacy
     Policy](/legal/privacy-policy/)
+colors_primary_button_background_color: "#1d92cf"
+colors_primary_button_text_color: "#ffffff"
