@@ -6,13 +6,72 @@ media_folder: "static/images/uploads" # Media files will be stored in the repo u
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
-  - name: "homeSections"
-    label: "Home Sections"
-    folder: "data"
-    create: true
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Content", name: "content", widget: "markdown" }
+collections:
+  - name: "home"
+    label: "Home Page"
+    files:
+      - name: "index"
+        label: "Home Page"
+        file: "content/index.md"
+        fields:
+          - label: "Home Sections"
+            name: "home_sections"
+            widget: "list"
+            sortable: true
+            types:
+              - label: "Text and Image"
+                name: "text-and-image"
+                widget: "object"
+                fields:
+                  - label: "Heading"
+                    name: "heading"
+                    widget: "string"
+                  - label: "Body"
+                    name: "body"
+                    widget: "markdown"
+                  - label: "Button"
+                    name: "button"
+                    widget: "string"
+                  - label: "Button Link"
+                    name: "button_link"
+                    widget: "string"
+                  - label: "Image"
+                    name: "image"
+                    widget: "image"
+              - label: "Active Listings Carousel"
+                name: "active-listings-carousel"
+                widget: "object"
+                fields:
+                  - label: "Heading"
+                    name: "heading"
+                    widget: "string"
+                  - label: "Body"
+                    name: "body"
+                    widget: "markdown"
+              - label: "Featured Boxes"
+                name: "featured-boxes"
+                widget: "object"
+                fields:
+                  - label: "Heading"
+                    name: "heading"
+                    widget: "string"
+                  - label: "Body"
+                    name: "body"
+                    widget: "markdown"
+                  - label: "Blocks"
+                    name: "blocks"
+                    widget: "list"
+                    fields:
+                      - label: "Heading"
+                        name: "heading"
+                        widget: "string"
+                      - label: "Image"
+                        name: "image"
+                        widget: "image"
+                      - label: "Link"
+                        name: "link"
+                        widget: "string"
+
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
     folder: "/content/blog" # The path to the folder where the documents are stored
