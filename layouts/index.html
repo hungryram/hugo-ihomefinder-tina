@@ -3,8 +3,12 @@
 
 {{ range .Params.home_sections }}
 
-    {{ if eq "text-and-image" .template }}
+    {{ if eq "text-and-image" .type }}
     {{ partial "page-builder/call-to-action" (dict "sectionData" .) }}
+    {{ end }}
+
+    {{ if eq "hero" .type }}
+    {{ partial "page-builder/hero" (dict "sectionData" .) }}
     {{ end }}
 
 {{ end }}

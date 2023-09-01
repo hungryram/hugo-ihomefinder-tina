@@ -18,6 +18,30 @@ collections:
             widget: "list"
             sortable: true
             types:
+              - label: "Hero"
+                name: "hero"
+                widget: "object"
+                fields:
+                  - label: "Heading"
+                    name: "heading"
+                    widget: "string"
+                    required: false  # Make this field optional
+                  - label: "Body"
+                    name: "body"
+                    widget: "markdown"
+                    required: false  # Make this field optional
+                  - label: "Button"
+                    name: "button"
+                    widget: "string"
+                    required: false  # Make this field optional
+                  - label: "Button Link"
+                    name: "button_link"
+                    widget: "string"
+                    required: false  # Make this field optional
+                  - label: "Image"
+                    name: "image"
+                    widget: "image"
+                    required: false  # Make this field optional
               - label: "Text and Image"
                 name: "text-and-image"
                 widget: "object"
