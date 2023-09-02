@@ -42,4 +42,20 @@ home_sections:
     column_number: 3
     background_color: "#343434"
     body_color: "#ffffff"
+  - type: featured_Panel
+    featured_blocks:
+      - body: Widgets define the data type and interface for entry fields. Decap CMS
+          comes with several built-in widgets. Click the widget names in t
+        image: /images/uploads/2-wyndam-selects-1-.jpg
+      - body: Widgets define the data type and interface for entry fields. Decap CMS
+          comes with several built-in widgets. Click the widget names in
+          tWidgets define the data type and interface for entry fields. Decap
+          CMS comes with several built-in widgets. Click the widget names in t
+        image: /images/uploads/11-32-31-ave-01-hero-p2-medium-res.jpg
+        button_link: /contact
+    body: Widgets define the data type and interface for entry fields. Decap CMS
+      comes with several built-in widgets. Click the widget names in tWidgets
+      define the data type and interface for entry fields. Decap CMS comes with
+      several built-in widgets. Click the widget names in t
+    column_number: 3
 ---
