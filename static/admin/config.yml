@@ -13,9 +13,8 @@ collections:
         label: "Menu"
         file: "data/menu.yml"
         fields:
-          - label: "Name"
-            name: "name"
-            widget: "string"
+          - { name: "name", label: "Name", widget: "string" }
+          - { name: "url", label: "URL", widget: "string" }
   - name: "appearance" # This is the collection name
     label: "Appearance" # This is the label shown in the CMS
     files:
