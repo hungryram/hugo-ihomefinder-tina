@@ -26,4 +26,17 @@ home_sections:
     reverse_column: true
     type: text-and-image
     image: ""
+  - type: featured_grid
+    featured_blocks:
+      - body: we know how to locate the finest properties and negotiate the best deals.
+          It’s our job to know about the latest market conditions, government
+          regulations, and upcoming developments – so that you don’t have t
+        image: /images/uploads/2-wyndam-selects-1-.jpg
+      - body: ith years of experience helping local buyers and sellers just like
+          yourself, we know how to locate the finest properties and negotiate
+          the best deals. It’s our job to know about the latest market
+          conditions, government regulations, and upcoming developments – so
+          that you don’t have t
+        image: /images/uploads/11-32-31-ave-01-hero-p2-medium-res.jpg
+    body: This is the body of the featured Blocks
 ---
