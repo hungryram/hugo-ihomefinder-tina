@@ -17,9 +17,15 @@ collections:
             name: nav_items
             widget: list
             fields:
-              - {label: Label, name: label, widget: string}
-              - {label: Path, name: path, widget: string}
-
+              - { label: Label, name: label, widget: string }
+              - { label: Path, name: path, widget: string }
+              - label: Submenu Items
+                name: sub_items
+                required: false
+                widget: list
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Path, name: path, widget: string }
   - name: "appearance" # This is the collection name
     label: "Appearance" # This is the label shown in the CMS
     files:
