@@ -58,7 +58,7 @@ home_sections:
       define the data type and interface for entry fields. Decap CMS comes with
       several built-in widgets. Click the widget names in t
     slider: true
-    column_number: 4
+    column_number: 2
     background_color: "#767676"
     body_color: "#ffffff"
 ---

@@ -1,47 +1,60 @@
 {{ if index .sectionData "slider" }}
 <div
-  class="swiper-container"
+  class="section"
   style="{{ if index .sectionData "background_color" }}background-color:{{ index .sectionData "background_color" }}{{ end }};{{ if index .sectionData "background_image" }}background-image:url({{ index .sectionData "background_image" }}){{ end }}"
 >
-  <div
-    class="swiper-wrapper"
-  >
-    {{ range index .sectionData "featured_blocks" }}
-    <div class="swiper-slide">
-      <div
-        class="container mx-auto"
-        style="{{ with index .sectionData "body_color" }}color:{{ . }}{{ end }}"
-      >
-        {{ with .image }}
-        <img
-          src="{{ . }}"
-          alt=""
-          class="absolute inset-0 -z-10 h-full w-full object-cover"
-        />
-        {{ end }}
-        {{ with .body }}
-        <div
-          class="mx-auto max-w-2xl lg:text-center content"
-        >
-          {{ . | markdownify }}
+<div class="container mx-auto" style="{{ with index .sectionData "body_color" }}color:{{ . }}{{ end }}">
+    {{ with index .sectionData "body" }}
+    <div class="mx-auto max-w-2xl lg:text-center content">
+        {{ . | markdownify }}
+    </div>
+    {{ end }}
+</div>
+    <div class="swiper-container-fPanel mt-16">
+        <div class="swiper-wrapper">
+        {{ range index .sectionData "featured_blocks" }}
+        <div class="swiper-slide">
+          <div class="relative w-full h-80">
+            {{ with .image }}
+            <img
+              src="{{ . }}"
+              alt=""
+              class="absolute inset-0 -z-10 h-full w-full object-cover"
+            />
+            {{ end }}
+            {{ with .body }}
+            <div
+              class="mx-auto max-w-2xl lg:text-center content flex items-center h-full px-4"
+            >
+              {{ . | markdownify }}
+            </div>
+            {{ end }}
+          </div>
         </div>
         {{ end }}
       </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Add Navigation -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
-    {{ end }}
-  </div>
-  <!-- Add Pagination -->
-  <div class="swiper-pagination"></div>
-  <!-- Add Navigation -->
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
 </div>
 <script>
-    var mySwiper = new Swiper(".swiper-container", {
+    var mySwiper = new Swiper(".swiper-container-fPanel", {
       // Optional: Add your Swiper settings here
-      slidesPerView: 1, // Number of slides to display
-      spaceBetween: 30, // Space between slides (in pixels)
+      spaceBetween: 10, // Space between slides (in pixels)
       loop: true, // Infinite loop
+      breakpoints: {
+      // For screens less than or equal to 640px wide (mobile)
+      640: {
+        slidesPerView: 1,
+      },
+      // For screens greater than 640px wide (tablet and above)
+      768: {
+        slidesPerView: {{ with index .sectionData "column_number" }}{{ . }}{{ else }}3{{ end }},
+      },
+    },
       pagination: {
         el: ".swiper-pagination", // Pagination container
       },
