@@ -2,7 +2,7 @@
     <div class="container mx-auto">
       <div class="md:flex items-center gap-10 md:space-y-0 space-y-10 {{ if index .sectionData "reverse_column" }} flex-row-reverse {{ end }}">
         <div class="md:w-1/2">
-          <div class="content">{{ index .sectionData "body" | markdownify }}</div>
+          <div class="content" style="{{ if index .sectionData "body_text_color" }}color:{{ index .sectionData "body_text_color" }}{{ end }}">{{ index .sectionData "body" | markdownify }}</div>
           {{ if index .sectionData "button" }}
             <div class="mt-10 flex items-center gap-x-6 lg:justify-start">
               <a href="{{ index .sectionData "button_link" }}" class="primary-button">{{ index .sectionData "button" }}</a>
