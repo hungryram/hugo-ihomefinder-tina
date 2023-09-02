@@ -15,6 +15,10 @@
     {{ partial "page-builder/featured-grid" (dict "sectionData" .) }}
     {{ end }}
 
+    {{ if eq "featured_panel" .type }}
+    {{ partial "page-builder/featured-panel" (dict "sectionData" .) }}
+    {{ end }}
+
 {{ end }}
 
 {{ partial "global/footer" . }}

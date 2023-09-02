@@ -98,6 +98,24 @@ collections:
                       - {label: "Image", name: "image", widget: "image", required: false}
                       - {label: "Button Text", name: "button", widget: "string", required: false}
                       - {label: "Button Link", name: "button_link", widget: "string", required: false}
+              - label: "Featured Panel"
+                name: "featured_Panel"
+                widget: "list"
+                fields:
+                  - {label: "Body", name: "body", widget: "markdown"}
+                  - {label: "Column Number", name: "column_number", widget: "number", min: 2, max: 4, value_type: int}
+                  - {label: "Background Image", name: "background_image", widget: "image", required: false}
+                  - {label: "Background Color", name: "background_color", widget: "color", required: false}
+                  - {label: "Body Color", name: "body_color", widget: "color", required: false}
+                  - label: "Featured Blocks"
+                    name: "featured_blocks"
+                    widget: "list"
+                    allow_add: true
+                    fields:
+                      - {label: "Body", name: "body", widget: "markdown", required: false}
+                      - {label: "Image", name: "image", widget: "image", required: false}
+                      - {label: "Button Text", name: "button", widget: "string", required: false}
+                      - {label: "Button Link", name: "button_link", widget: "string", required: false}
               - label: "Text and Image"
                 name: "text-and-image"
                 widget: "object"
