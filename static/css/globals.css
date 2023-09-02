@@ -1,3 +1,14 @@
+.section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
 .primary-button {
     background-color: var(--primary-button-background);
+    color: var(--primary-button-text-color);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    display: block;
 }
