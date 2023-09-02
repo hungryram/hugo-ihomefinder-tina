@@ -13,16 +13,17 @@ home_sections:
     overlayColor: rgba(75, 75, 75, 0.73)
     type: hero
     image: /images/uploads/2-wyndam-selects-1-.jpg
-  - type: text-and-image
-    heading: New Heading
-    body: >-
+  - body: >-
       ## Let's get it
 
 
       With years of experience helping local buyers and sellers just like yourself, we know how to locate the finest properties and negotiate the best deals. It’s our job to know about the latest market conditions, government regulations, and upcoming developments – so that you don’t have to.
-    button: Learn More
+    heading: New Heading
     button_link: /contact
-    image: /images/uploads/2-wyndam-selects-1-.jpg
-    reverse_column: true
+    body_text_color: "#d5d5d5"
     background_color: "#e82a2a"
+    button: Learn More
+    reverse_column: true
+    type: text-and-image
+    image: /images/uploads/2-wyndam-selects-1-.jpg
 ---
