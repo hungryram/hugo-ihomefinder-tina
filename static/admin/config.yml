@@ -85,6 +85,7 @@ collections:
                 widget: "list"
                 fields:
                   - {label: "Body", name: "body", widget: "markdown"}
+                  - {label: "Column Number", name: "column_number", widget: "number", min: 2, max: 4, value_type: int}
                   - label: "Featured Blocks"
                     name: "featured_blocks"
                     widget: "list"

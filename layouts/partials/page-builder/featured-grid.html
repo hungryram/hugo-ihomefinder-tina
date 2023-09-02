@@ -1,0 +1,29 @@
+<div class="section" style="{{ if index .sectionData "background_color" }}background-color:{{ index .sectionData "background_color" }}{{ end }};{{ if index .sectionData "background_image" }}background-image:url({{ index .sectionData "background_image" }}){{ end }}">
+    <div class="container mx-auto">
+        {{ with index .sectionData "body" }}
+        <div class="mx-auto max-w-2xl lg:text-center content">
+            {{ . | markdownify }}
+        </div>
+        {{ end }}
+        <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+            <div class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+            {{ range index .sectionData "featured_blocks" }}
+            <div class="flex flex-col items-start">
+            {{ with .image }}
+            <div class="relative w-full">
+                <img src="{{ . }}" alt="" class="aspect-[16/9] w-full rounded-md bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]">
+              </div>
+            {{ end }}
+                <div class="max-w-xl mt-6 content">
+                  <div>
+                    {{ with .body }}
+                        {{ . | markdownify }}
+                    {{ end }}
+                  </div>
+                </div>
+              </div>
+            {{ end }}
+            </div>
+        </div>
+    </div>
+</div>
