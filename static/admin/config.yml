@@ -13,14 +13,17 @@ collections:
         label: "Main Menu"
         file: "data/menu.yml"
         fields:
-          - label: "Menu"
-            name: "menu"
+          - label: "Featured Panel"
+            name: "featured_Panel"
             widget: "list"
-            sortable: true
-            allow_add: true
             fields:
-              - { name: "Name", label: "Name", widget: "string" }
-              - { name: "Link", label: "link", widget: "string" }
+              - label: "Featured Blocks"
+                name: "featured_blocks"
+                widget: "list"
+                allow_add: true
+                fields:
+                  - {label: "Body", name: "body", widget: "markdown", required: false}
+                  - {label: "Button Link", name: "button_link", widget: "string", required: false}
   - name: "appearance" # This is the collection name
     label: "Appearance" # This is the label shown in the CMS
     files:
