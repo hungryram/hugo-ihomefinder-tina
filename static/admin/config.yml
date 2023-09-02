@@ -17,7 +17,7 @@ collections:
             name: "navigation_items"
             widget: "list"
             sortable: true
-            types:
+            fields:
               - label: "Items"
                 name: "items"
                 widget: "object"
