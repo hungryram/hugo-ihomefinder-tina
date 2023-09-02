@@ -23,4 +23,5 @@ home_sections:
     button: Learn More
     button_link: /contact
     image: /images/uploads/2-wyndam-selects-1-.jpg
+    reverse_column: true
 ---
