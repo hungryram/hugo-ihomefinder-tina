@@ -80,13 +80,18 @@ collections:
                     name: "image"
                     widget: "image"
                     required: false  # Make this field optional
-              - label: "Featured Grid"
-                name: "featured_grid"
+              - label: "Testimonials"
+                name: "testimonials"
                 widget: "list"
-                summary: '{{fields.image}}'
-                fields: 
-                  - {label: Image, name: image, widget: image}
-                  - {label: Body, name: body, widget: markdown}
+                summary: '{{fields.quote}} - {{fields.author.name}}'
+                fields:
+                  - {label: Quote, name: quote, widget: string}
+                  - label: Author
+                    name: author
+                    widget: object
+                    fields:
+                      - {label: Name, name: name, widget: string}
+                      - {label: Avatar, name: avatar, widget: image}
               - label: "Text and Image"
                 name: "text-and-image"
                 widget: "object"
