@@ -57,5 +57,4 @@ home_sections:
       comes with several built-in widgets. Click the widget names in tWidgets
       define the data type and interface for entry fields. Decap CMS comes with
       several built-in widgets. Click the widget names in t
-    column_number: 3
 ---

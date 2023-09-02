@@ -84,8 +84,8 @@ collections:
                 name: "featured_grid"
                 widget: "list"
                 fields:
-                  - {label: "Body", name: "body", widget: "markdown"}
-                  - {label: "Column Number", name: "column_number", widget: "number", min: 2, max: 4, value_type: int}
+                  - {label: "Body", name: "body", widget: "markdown", required: false}
+                  - {label: "Column Number", name: "column_number", widget: "number", min: 2, max: 4, value_type: int, required: false}
                   - {label: "Background Image", name: "background_image", widget: "image", required: false}
                   - {label: "Background Color", name: "background_color", widget: "color", required: false}
                   - {label: "Body Color", name: "body_color", widget: "color", required: false}
@@ -102,8 +102,9 @@ collections:
                 name: "featured_Panel"
                 widget: "list"
                 fields:
-                  - {label: "Body", name: "body", widget: "markdown"}
-                  - {label: "Column Number", name: "column_number", widget: "number", min: 2, max: 4, value_type: int}
+                  - {label: "Body", name: "body", widget: "markdown", required: false}
+                  - {label: "Enable Slider", name: "slider", widget: "boolean", required: false}
+                  - {label: "Column Number", name: "column_number", widget: "number", min: 2, max: 4, value_type: int, required: false}
                   - {label: "Background Image", name: "background_image", widget: "image", required: false}
                   - {label: "Background Color", name: "background_color", widget: "color", required: false}
                   - {label: "Body Color", name: "body_color", widget: "color", required: false}
