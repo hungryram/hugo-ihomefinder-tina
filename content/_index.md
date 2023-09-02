@@ -57,4 +57,8 @@ home_sections:
       comes with several built-in widgets. Click the widget names in tWidgets
       define the data type and interface for entry fields. Decap CMS comes with
       several built-in widgets. Click the widget names in t
+    slider: true
+    column_number: 4
+    background_color: "#767676"
+    body_color: "#ffffff"
 ---
