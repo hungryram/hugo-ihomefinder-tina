@@ -12,6 +12,8 @@ collections:
       - name: "menu"
         label: "Menu"
         file: "data/menu.yml"
+        widget: "list"
+        allow_add: true
         fields:
           - { name: "name", label: "Name", widget: "string" }
           - { name: "url", label: "URL", widget: "string" }
