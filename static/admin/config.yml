@@ -18,7 +18,7 @@ collections:
             widget: list
             fields:
               - { label: Label, name: label, widget: string }
-              - { label: Path, name: path, widget: string }
+              - { label: Path, name: path, widget: string, required: false }
               - label: Submenu Items
                 name: sub_items
                 required: false

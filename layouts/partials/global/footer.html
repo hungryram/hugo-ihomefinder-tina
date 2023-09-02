@@ -118,4 +118,25 @@
       </div>
     </div>
   </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const dropdownContainers = document.querySelectorAll(".has-dropdown");
   
+      dropdownContainers.forEach((container) => {
+        const trigger = container.querySelector(".trigger");
+        const dropdown = container.querySelector(".dropdown-menu");
+  
+        container.addEventListener("mouseenter", () => {
+          dropdown.style.display = "block";
+        });
+  
+        container.addEventListener("mouseleave", () => {
+          dropdown.style.display = "none";
+        });
+      });
+    });
+  </script>
+  
+  
+</body>
+</html>
