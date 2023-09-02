@@ -39,5 +39,5 @@ home_sections:
           that you don’t have t
         image: /images/uploads/11-32-31-ave-01-hero-p2-medium-res.jpg
     body: This is the body of the featured Blocks
-    column_number: 4
+    column_number: 3
 ---
