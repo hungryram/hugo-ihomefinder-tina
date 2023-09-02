@@ -24,4 +24,5 @@ home_sections:
     button_link: /contact
     image: /images/uploads/2-wyndam-selects-1-.jpg
     reverse_column: true
+    background_color: "#e82a2a"
 ---
