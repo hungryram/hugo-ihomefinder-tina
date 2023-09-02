@@ -104,6 +104,14 @@ collections:
                     name: "image"
                     widget: "image"
                     required: false  # Make this field optional
+                  - label: "Background Image"
+                    name: "background_image"
+                    widget: "image"
+                    required: false  # Make this field optional
+                  - label: "Background Color"
+                    name: "background_color"
+                    widget: "color"
+                    required: false  # Make this field optional
 
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
