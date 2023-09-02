@@ -1,6 +1,6 @@
-<div class="section" style="background-color:{{ index .sectionData "background_color" }};background-image:url({{ index .sectionData "background_image" }})">
+<div class="section" style="{{ if index .sectionData "background_color" }}background-color:{{ index .sectionData "background_color" }}{{ end }};{{ if index .sectionData "background_image" }}background-image:url({{ index .sectionData "background_image" }}){{ end }}">
     <div class="container mx-auto">
-      <div class="md:flex items-center gap-10 space-y-10 {{ if index .sectionData "reverse_column" }} flex-row-reverse {{ end }}">
+      <div class="md:flex items-center gap-10 md:space-y-0 space-y-10 {{ if index .sectionData "reverse_column" }} flex-row-reverse {{ end }}">
         <div class="md:w-1/2">
           <div class="content">{{ index .sectionData "body" | markdownify }}</div>
           {{ if index .sectionData "button" }}

@@ -112,6 +112,10 @@ collections:
                     name: "background_color"
                     widget: "color"
                     required: false  # Make this field optional
+                  - label: "Body Text Color"
+                    name: "body_text_color"
+                    widget: "color"
+                    required: false  # Make this field optional
 
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
