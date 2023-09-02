@@ -88,7 +88,7 @@ collections:
                   name: featured_blocks
                   widget: object
                   allow_add: true
-                  fields:
+                  field:
                     - {label: "Body", name: "body", widget: "markdown"}
                     - {label: "Image", name: "image", widget: image}
               - label: "Text and Image"
