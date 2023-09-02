@@ -15,11 +15,11 @@ home_sections:
     image: /images/uploads/2-wyndam-selects-1-.jpg
   - type: text-and-image
     heading: New Heading
-    body: With years of experience helping local buyers and sellers just like
-      yourself, we know how to locate the finest properties and negotiate the
-      best deals. It’s our job to know about the latest market conditions,
-      government regulations, and upcoming developments – so that you don’t have
-      to.
+    body: >-
+      ## Let's get it
+
+
+      With years of experience helping local buyers and sellers just like yourself, we know how to locate the finest properties and negotiate the best deals. It’s our job to know about the latest market conditions, government regulations, and upcoming developments – so that you don’t have to.
     button: Learn More
     button_link: /contact
     image: /images/uploads/2-wyndam-selects-1-.jpg
