@@ -1,0 +1,11 @@
+nav_items:
+  - sub_items: []
+    label: Home
+    path: /
+  - label: Resources
+    sub_items:
+      - label: Blog
+        path: /blog
+    path: /
+  - label: Contact
+    path: /contact
