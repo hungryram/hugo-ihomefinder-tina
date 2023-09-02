@@ -6,24 +6,28 @@ media_folder: "static/images/uploads" # Media files will be stored in the repo u
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
-  - name: "Menu"
+  - name: "menu"
     label: "Menu"
     files:
       - name: "menu"
-        label: "Main Menu"
+        label: "Menu"
         file: "data/menu.yml"
         fields:
-          - label: "Featured Panel"
-            name: "featured_Panel"
+          - label: "Navigation Items"
+            name: "navigation_items"
             widget: "list"
-            fields:
-              - label: "Featured Blocks"
-                name: "featured_blocks"
-                widget: "list"
-                allow_add: true
+            sortable: true
+            types:
+              - label: "Items"
+                name: "items"
+                widget: "object"
                 fields:
-                  - {label: "Body", name: "body", widget: "markdown", required: false}
-                  - {label: "Button Link", name: "button_link", widget: "string", required: false}
+                  - label: "Name"
+                    name: "name"
+                    widget: "string"
+                  - label: "Link"
+                    name: "link"
+                    widget: "string"
   - name: "appearance" # This is the collection name
     label: "Appearance" # This is the label shown in the CMS
     files:
