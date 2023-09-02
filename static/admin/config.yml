@@ -13,21 +13,13 @@ collections:
         label: "Main Menu"
         file: "data/menu.yml"
         fields:
-          - label: "Menu Order"
-            name: "menu_order"
+          - label: "Menu"
+            name: "menu"
             widget: "list"
             sortable: true
             fields:
-              - label: "Hero"
-                name: "hero"
-                widget: "object"
-                fields:
-                  - label: "Name"
-                    name: "name"
-                    widget: "string"
-                  - label: "Link"
-                    name: "link"
-                    widget: "string"
+              - { name: "Name", label: "Name", widget: "string" }
+              - { name: "Link", label: "link", widget: "string" }
   - name: "appearance" # This is the collection name
     label: "Appearance" # This is the label shown in the CMS
     files:
