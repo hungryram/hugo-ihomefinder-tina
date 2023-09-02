@@ -84,8 +84,12 @@ collections:
                 name: "featured_grid"
                 widget: "list"
                 fields:
-                  - { label: "Body Text", name: "body", widget: "markdown" }
-                  - { label: "Image", name: "image", widget: "image" }
+                - label: Featured Blocks
+                  name: featured_blocks
+                  widget: object
+                  fields:
+                    - {label: "Body", name: "body", widget: "markdown"}
+                    - {label: "Image", name: "image", widget: image}
               - label: "Text and Image"
                 name: "text-and-image"
                 widget: "object"
