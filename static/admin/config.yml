@@ -84,9 +84,9 @@ collections:
                 name: "text-and-image"
                 widget: "object"
                 fields:
-                  - label: "Heading"
-                    name: "heading"
-                    widget: "string"
+                  - label: "Reverse Column"
+                    name: "reverse_column"
+                    widget: "boolean"
                     required: false  # Make this field optional
                   - label: "Body"
                     name: "body"

@@ -1,13 +1,13 @@
 <div class="section">
     <div class="container mx-auto">
-      <div class="md:flex items-center gap-10">
+      <div class="md:flex items-center gap-10 space-y-10 {{ if index .sectionData "reverse_column" }} flex-row-reverse {{ end }}">
         <div class="md:w-1/2">
-          <h2>{{ index .sectionData "heading" }}</h2>
-          <div>{{ index .sectionData "body" | markdownify }}</div>
-          <div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
-            <a href="#" class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Get started</a>
-            <a href="#" class="text-sm font-semibold leading-6 text-white">Learn more <span aria-hidden="true">→</span></a>
-          </div>
+          <div class="content">{{ index .sectionData "body" | markdownify }}</div>
+          {{ if index .sectionData "button" }}
+            <div class="mt-10 flex items-center gap-x-6 lg:justify-start">
+              <a href="{{ index .sectionData "button_link" }}" class="primary-button">{{ index .sectionData "button" }}</a>
+            </div>
+          {{ end }}
         </div>
         {{ if index .sectionData "image"}}
         <div class="md:w-1/2">
