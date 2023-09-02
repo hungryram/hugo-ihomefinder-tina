@@ -17,6 +17,7 @@ collections:
             name: "menu"
             widget: "list"
             sortable: true
+            allow_add: true
             fields:
               - { name: "Name", label: "Name", widget: "string" }
               - { name: "Link", label: "link", widget: "string" }
