@@ -1,5 +1,5 @@
-{{ partial "global/head" }}
-{{ partial "global/navbar" }}
+{{ partial "global/head" . }}
+{{ partial "global/navbar" . }}
 <h1>test{{ .Site.Data.appearance.colors_primary_button_background_color }}
 </h1>
 {{ range .Params.home_sections }}
@@ -14,4 +14,4 @@
 
 {{ end }}
 
-{{ partial "global/footer" }}
+{{ partial "global/footer" . }}
