@@ -25,5 +25,5 @@ home_sections:
     button: Learn More
     reverse_column: true
     type: text-and-image
-    image: /images/uploads/2-wyndam-selects-1-.jpg
+    image: ""
 ---
