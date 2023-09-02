@@ -80,6 +80,12 @@ collections:
                     name: "image"
                     widget: "image"
                     required: false  # Make this field optional
+              - label: "Featured Grid"
+                name: "featured_grid"
+                widget: "list"
+                fields:
+                  - { label: "Body Text", name: "body", widget: "markdown" }
+                  - { label: "Image", name: "image", widget: "image" }
               - label: "Text and Image"
                 name: "text-and-image"
                 widget: "object"

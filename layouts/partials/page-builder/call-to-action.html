@@ -1,10 +1,10 @@
 <div class="section" style="{{ if index .sectionData "background_color" }}background-color:{{ index .sectionData "background_color" }}{{ end }};{{ if index .sectionData "background_image" }}background-image:url({{ index .sectionData "background_image" }}){{ end }}">
     <div class="container mx-auto">
-      <div class="md:flex items-center gap-10 md:space-y-0 space-y-10 {{ if index .sectionData "reverse_column" }} flex-row-reverse {{ end }}">
-        <div class="md:w-1/2">
+      <div class="md:flex items-center gap-10 md:space-y-0 space-y-10 {{ if index .sectionData "image" }}{{ else }}justify-center text-center{{ end }} {{ if index .sectionData "reverse_column" }} flex-row-reverse {{ end }}">
+        <div class="{{ if index .sectionData "image" }}md:w-1.2{{ else }}md:w-3/5{{ end }}">
           <div class="content" style="{{ if index .sectionData "body_text_color" }}color:{{ index .sectionData "body_text_color" }}{{ end }}">{{ index .sectionData "body" | markdownify }}</div>
           {{ if index .sectionData "button" }}
-            <div class="mt-10 flex items-center gap-x-6 lg:justify-start">
+            <div class="mt-10 flex items-center gap-x-6 {{ if index .sectionData "image" }}{{ else }}justify-center text-center{{ end }}">
               <a href="{{ index .sectionData "button_link" }}" class="primary-button">{{ index .sectionData "button" }}</a>
             </div>
           {{ end }}
