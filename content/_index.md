@@ -40,4 +40,6 @@ home_sections:
         image: /images/uploads/11-32-31-ave-01-hero-p2-medium-res.jpg
     body: This is the body of the featured Blocks
     column_number: 3
+    background_color: "#343434"
+    body_color: "#ffffff"
 ---
