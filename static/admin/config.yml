@@ -8,6 +8,33 @@ collections:
   - name: settings
     label: Settings
     files:
+      - name: "data_profile" # This is the file name without the extension
+        label: "Profile" # Label for the file in the CMS
+        file: "data/profile.yml" # Path to your appearance YAML file
+        fields:
+          - { name: "company_name", label: "Company Name", widget: "string", required: false }
+          - { name: "branding_favicon", label: "Favicon", widget: "image", required: false }
+          - { name: "branding_logo_width", label: "Logo Width", widget: "number", required: false }
+          - label: "Contact Information"
+            name: "contact_information"
+            widget: "object"
+            summary: '{{fields.name}}: {{fields.birthdate}}'
+            fields:
+              - {label: "Public", name: "public", widget: "boolean", default: true}
+              - {label: "Name", name: "name", widget: "string"}
+              - label: "Birthdate"
+                name: "birthdate"
+                widget: "date"
+                default: ""
+                format: "MM/DD/YYYY"
+              - label: "Address"
+                name: "address"
+                widget: "object"
+                collapsed: true
+                fields: 
+                  - {label: "Street Address", name: "street", widget: "string"}
+                  - {label: "City", name: "city", widget: "string"}
+                  - {label: "Postal Code", name: "post-code", widget: "string"}
       - file: data/settings.yml
         label: Navigation
         name: navigation
