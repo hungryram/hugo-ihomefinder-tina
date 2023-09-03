@@ -1,0 +1,25 @@
+company_name: Hungry Ram Web Design
+contact_information:
+  address:
+    street: "5511 Mirage St. #1007"
+    city: Yorba Linda
+    post-code: "92887"
+  contact:
+    email: ram@hungryram.com
+    direct: 951-454-2650
+    office: 657-640-3455
+  social:
+    snapchat: https://snapchat.com
+    youtube: https://youtube.com
+    facebook: https://facebook.com
+    whatsapp: https://whatsapp.com
+    instagram: https://instagram.com
+    zillow: https://zillow.com
+    x: https://twitter.com
+    realtor: https://realtor.com
+    tiktok: https://tiktok.com
+    pinterest: https://pinterest.com
+    linkedin: https://linkedin.com
+  seo:
+    title_tag: My website is awesome
+    meta_description: this is the website that I am doing
