@@ -4,7 +4,6 @@ backend:
 # These lines should *not* be indented
 media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
-
 collections:
   - name: settings
     label: Settings
@@ -33,10 +32,6 @@ collections:
         label: "Appearance Configuration" # Label for the file in the CMS
         file: "data/appearance.yml" # Path to your appearance YAML file
         fields:
-          - { name: "branding_site_title", label: "Site Title", widget: "string", required: false }
-          - { name: "branding_logo", label: "Logo", widget: "image", required: false }
-          - { name: "branding_favicon", label: "Favicon", widget: "image", required: false }
-          - { name: "branding_logo_width", label: "Logo Width", widget: "number", required: false }
           - { name: "header_top_header_color", label: "Top Header Color", widget: "color", required: false }
           - { name: "header_header_background_color", label: "Header Background Color", widget: "color", required: false }
           - { name: "header_enable_white_text", label: "Enable White Text", widget: "boolean", required: false }
@@ -45,13 +40,16 @@ collections:
           - { name: "header_call_to_action_link", label: "Call to Action Link", widget: "string", required: false }
           - { name: "header_call_to_action_label", label: "Call to Action Label", widget: "string", required: false }
           - { name: "header_remove_call_to_action", label: "Remove Call to Action", widget: "boolean", required: false }
-          - { name: "pages_image", label: "Pages Image", widget: "image", required: false }
           - { name: "colors_primary_button_background_color", label: "Primary Button Background Color", widget: "color", required: false }
           - { name: "colors_primary_button_text_color", label: "Primary Button Text Color", widget: "color", required: false }
           - { name: "colors_accent", label: "Accent Color", widget: "color", required: false }
-          - { name: "colors_idx_title_background_color", label: "IDX Title Background Color", widget: "color", required: false }
-          - { name: "colors_idx_title_text_color", label: "IDX Title Text Color", widget: "color", required: false }
-          - { name: "form_form_disclaimer", label: "Form Disclaimer", widget: "markdown", required: false }
+      - name: "data_branding" # This is the file name without the extension
+        label: "Branding" # Label for the file in the CMS
+        file: "data/branding.yml" # Path to your appearance YAML file
+        fields:
+          - { name: "branding_logo", label: "Logo", widget: "image", required: false }
+          - { name: "branding_favicon", label: "Favicon", widget: "image", required: false }
+          - { name: "branding_logo_width", label: "Logo Width", widget: "number", required: false }
   - name: "home"
     label: "Home Page"
     files:
