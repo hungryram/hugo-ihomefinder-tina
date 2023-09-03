@@ -58,6 +58,13 @@ collections:
                 fields: 
                   - {label: "Title Tag", name: "title_tag", widget: "string", required: false}
                   - {label: "Meta Description", name: "meta_description", widget: "text", required: false}
+              - label: "Custom Code"
+                name: "custom_code"
+                widget: "object"
+                collapsed: true
+                fields: 
+                  - {label: "Custom Scripts in Head", name: "head_custom_script", widget: "text", required: false}
+                  - {label: "Custom CSS in Head", name: "head_custom_css", widget: "text", required: false}
       - file: data/settings.yml
         label: Navigation
         name: navigation
@@ -221,7 +228,7 @@ collections:
                     name: "body_text_color"
                     widget: "color"
                     required: false
-
+# BLOG
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
     folder: "/content/blog" # The path to the folder where the documents are stored
@@ -232,5 +239,32 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
       - {label: "Body", name: "body", widget: "markdown"}
+
+# TEAM
+  - name: "team"
+    label: "Team" 
+    folder: "/content/team"
+    create: true
+    slug: "{{title}}" 
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "team"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Address"
+        name: "address"
+        widget: "object"
+        collapsed: true
+        fields: 
+          - {label: "Street Address", name: "street", widget: "string", required: false}
+          - {label: "City", name: "city", widget: "string", required: false}
+          - {label: "Postal Code", name: "post-code", widget: "string", required: false}
+      - label: "Contact"
+        name: "contact"
+        widget: "object"
+        collapsed: true
+        fields: 
+          - {label: "Direct Number", name: "direct", widget: "string", required: false}
+          - {label: "Office Number", name: "office", widget: "string", required: false}
+          - {label: "email", name: "email", widget: "string", required: false}

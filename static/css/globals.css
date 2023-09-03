@@ -39,3 +39,7 @@ body .content h6 {
 .content h2 {
     font-size: 2rem;
 }
+
+body a:hover {
+    text-decoration: none;
+}
