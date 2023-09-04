@@ -251,7 +251,7 @@ collections:
     slug: "{{slug}}" # Filename template, e.g.,
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Update Date", name: "date", widget: "datetime"}
+      - {label: "Update Date", name: "last_update", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
 
 # TEAM

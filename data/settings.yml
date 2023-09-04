@@ -8,6 +8,8 @@ nav_items:
         path: /blog
       - label: Team
         path: /team
+      - label: Legal
+        path: /legal
     path: /
   - label: Contact
     path: /contact
