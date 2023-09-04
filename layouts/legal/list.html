@@ -1,0 +1,13 @@
+{{ define "main" }}
+<div class="section">
+    <div class="container mx-auto">
+        <div class="text-center">
+            <ul class="list-disc list-inside">
+                {{ range .Pages }}
+                <li><a href="{{ .Permalink }}" class="text-2xl font-semibold">{{ .Title }}</a></li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</div>
+{{ end }}

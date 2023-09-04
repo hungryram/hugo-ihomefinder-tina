@@ -1,0 +1,21 @@
+<div class="content">
+    <h3>Share This</h3>
+</div>
+<div id="social-share" class="mb-10">
+    <div>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" class="share-button facebook" target="_blank"> Share on Facebook</a>
+    </div>
+    <div>
+        <a href="https://twitter.com/intent/tweet?url={{ .Permalink }}" class="share-button x" target="_blank">Share on X</a>
+    </div>
+    <div>
+        <a href="https://www.linkedin.com/shareArticle?url={{ .Permalink }}title={{ .Title }}&mini=true" class="share-button linkedin" target="_blank"> Share on Linkedin</a>
+    </div>
+    <div>
+        <a href="https://pinterest.com/pin/create/button/?url={{ .Permalink }}description={{ .Summary | truncate 200 }}&media={{ .Params.featured_image }}" class="share-button pinterest" target="_blank"> Pin on Pinterest</a>
+    </div>
+    <div>
+        <a class="share-button email" href="mailto:?subject={{ .Title }}" target="_blank">Share via Email</a>
+    </div>
+
+</div>
