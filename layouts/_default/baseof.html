@@ -1,5 +1,16 @@
 {{ partial "global/head" . }}
 {{ partial "global/navbar" . }}
+<div>
+    <div class="relative isolate overflow-hidden pt-14">
+      <img src="background-image:url({{ .Site.Data }})" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover">
+      <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-40">
+        <div class="text-center">
+          <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">{{ .Params.Title }}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 <main>
     {{ block "main" . }}
 

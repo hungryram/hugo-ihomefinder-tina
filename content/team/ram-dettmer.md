@@ -1,6 +1,7 @@
 ---
 layout: team
 title: Ram Dettmer
+position: REALTOR
 image: /images/uploads/swift.ai-logo-01.jpg
 address:
   street: "5511 Mirage St. #1007"
