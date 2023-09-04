@@ -1,0 +1,41 @@
+{{ $size := .Site.Data.developer }}
+
+<div class="section">
+    <div class="container mx-auto p-4 lg:p-0">
+        <div class="grid gap-4 grid-cols-1 md:grid-cols-3 lg:grid-cols-{{ $size.column_size }}">
+            {{ $blogCount := len (where .Site.RegularPages "Section" "==" "blog")  }}
+            {{ if gt $blogCount 0 }}
+                {{ $paginator := .Paginate (where .Pages "Type" "blog") 6 }}
+                {{ range $paginator.Pages.ByWeight }}
+                    {{ if ne .Title "" }}
+                        <div class="rounded-lg overflow-hidden shadow-md">
+                            <div class="relative h-0 pb-2/3">
+                                {{ if .Params.featured_image }}
+                                    <img src="{{ .Params.featured_image | absURL }}" alt="{{ .Params.image_alt_tag }}" class="absolute inset-0 w-full h-full object-cover">
+                                {{ else }}
+                                    <img src="https://res.cloudinary.com/hungryram19/image/upload/v1645813822/Resources/realestate-assets/no-house-photo.jpg" alt="no photo" class="absolute inset-0 w-full h-full object-cover">
+                                {{ end }}
+                            </div>
+                            <div class="p-4">
+                                <h2 class="text-xl font-semibold">{{ .Title }}</h2>
+                                <time class="text-xs text-gray-600">{{ .Date.Format "Jan 2, 2006" }}</time>
+                                <div class="mt-2">
+                                    <p>{{ .Summary }}</p>
+                                </div>
+                                <a href="{{ .Permalink }}" class="text-blue-600 font-bold italic">Read more...</a>
+                            </div>
+                        </div>
+                    {{ end }}
+                {{ end }}
+            {{ else }}
+                <div class="p-4">
+                    <h4 class="text-lg font-semibold">No blog added yet</h4>
+                    <p class="text-gray-600">Check back later for updated information.</p>
+                </div>
+            {{ end }}
+        </div>
+    </div>
+</div>
+
+{{ partial "templates/pagination" . }}
+{{ partial "templates/page-sidebar" . }}
