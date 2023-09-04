@@ -6,6 +6,8 @@ nav_items:
     sub_items:
       - label: Blog
         path: /blog
+      - label: Team
+        path: /team
     path: /
   - label: Contact
     path: /contact
