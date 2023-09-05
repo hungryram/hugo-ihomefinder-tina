@@ -1,0 +1,11 @@
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+      {{ range .Pages }}
+        {{ if eq .Type "team" }}
+          {{ partial "templates/team-card" . }}
+        {{ end }}
+      {{ end }}
+    </div>
+    <!-- Add pagination and navigation here if needed -->
+  </div>
+  

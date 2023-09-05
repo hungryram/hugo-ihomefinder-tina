@@ -1,3 +1,7 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
 .section {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -107,4 +111,15 @@ div#social-share div {
 .share-button.email:hover { 
     color: #fff;
     background-color: #000000; 
+}
+
+
+/* FOOTER */
+
+footer h2 {
+    color: var(--footer-heading-color);
+}
+
+footer * {
+    color: var(--footer-text-color);
 }

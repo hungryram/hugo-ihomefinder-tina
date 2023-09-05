@@ -108,6 +108,17 @@ collections:
           - { name: "branding_logo", label: "Logo", widget: "image", required: false }
           - { name: "branding_favicon", label: "Favicon", widget: "image", required: false }
           - { name: "branding_logo_width", label: "Logo Width", widget: "number", required: false }
+      - name: "footer" # This is the file name without the extension
+        label: "Footer" # Label for the file in the CMS
+        file: "data/footer.yml" # Path to your appearance YAML file
+        fields:
+          - { name: "footer_logo", label: "Footer Logo", widget: "image", required: false }
+          - { name: "footer_background", label: "Footer Background", widget: "image", required: false }
+          - { name: "footer_background_color", label: "Footer Background Color", widget: "color", required: false }
+          - { name: "footer_heading_color", label: "Footer Background Color", widget: "color", required: false }
+          - { name: "footer_text_color", label: "Footer Background Color", widget: "color", required: false }
+          - { name: "about", label: "About", widget: "text", required: false }
+          - { name: "disclaimer", label: "Disclaimer", widget: "markdown", required: false }
   - name: "home"
     label: "Home Page"
     files:
@@ -193,6 +204,13 @@ collections:
                       - {label: "Image", name: "image", widget: "image", required: false}
                       - {label: "Button Text", name: "button", widget: "string", required: false}
                       - {label: "Button Link", name: "button_link", widget: "string", required: false}
+              - label: "Team Section"
+                name: "team_section"
+                widget: "object"
+                fields:
+                  - {label: "Body", name: "body", widget: "markdown", required: false}
+                  - {label: "Background Color", name: "background_color", widget: "color", required: false}
+                  - {label: "Body Color", name: "body_color", widget: "color", required: false}
               - label: "Text and Image"
                 name: "text-and-image"
                 widget: "object"
