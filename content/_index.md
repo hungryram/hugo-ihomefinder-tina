@@ -61,4 +61,11 @@ home_sections:
     column_number: 2
     background_color: "#767676"
     body_color: "#ffffff"
+  - type: team_section
+    body: |-
+      ## Our Team
+
+      This is the team section
+    background_color: "#343434"
+    body_color: "#ffffff"
 ---
