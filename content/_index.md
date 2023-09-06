@@ -6,12 +6,12 @@ home_sections:
       This is the body of the hero
 
       New paragraph
-    enable_quick_search: true
     heading: This is the Hero
     color: rgba(0, 0, 0, 0.6)
     button_link: /contact
     button: Get Started
     overlayColor: rgba(75, 75, 75, 0.73)
+    enable_quick_search: true
     type: hero
     image: /images/uploads/2-wyndam-selects-1-.jpg
   - type: quick_search_idx
@@ -57,6 +57,8 @@ home_sections:
       - body: Widgets define the data type and interface for entry fields. Decap CMS
           comes with several built-in widgets. Click the widget names in t
         image: /images/uploads/2-wyndam-selects-1-.jpg
+        button_link: /contact
+        button: Get Started
       - body: Widgets define the data type and interface for entry fields. Decap CMS
           comes with several built-in widgets. Click the widget names in
           tWidgets define the data type and interface for entry fields. Decap
