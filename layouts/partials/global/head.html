@@ -51,9 +51,6 @@
 
 <!-- STYLESHEETS AND RESOURCES-->
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/globals.css">
-{{ if $.Site.Data.idx.enable_idx }}
-    <link rel="stylesheet" href="{{.Site.BaseURL}}css/ihf_style.css">
-{{ end }}
 
 {{ if $.Site.Data.idx.enable_google_recaptcha }}
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
