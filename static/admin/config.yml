@@ -122,6 +122,7 @@ collections:
         fields:
           - { name: "footer_logo", label: "Footer Logo", widget: "image", required: false }
           - { name: "footer_background", label: "Footer Background", widget: "image", required: false }
+          - { name: "footer_overlay", label: "Footer Overlay", widget: "image", required: false }
           - { name: "footer_background_color", label: "Footer Background Color", widget: "color", required: false }
           - { name: "footer_heading_color", label: "Footer Background Color", widget: "color", required: false }
           - { name: "footer_text_color", label: "Footer Background Color", widget: "color", required: false }
