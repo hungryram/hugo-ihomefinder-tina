@@ -69,7 +69,8 @@
 
 {{ if eq "blog_section" .type }}
 
-<div class="section" style="{{ if .background_color }}background-color:{{ .background_color }}{{ end }};{{ if .background_image }}background-image:url({{ .background_image }}){{ end }}">
+<div class="section"
+    style="{{ if .background_color }}background-color:{{ .background_color }}{{ end }};{{ if .background_image }}background-image:url({{ .background_image }}){{ end }}">
     <div class="container mx-auto">
         <div class="content" style="{{ if .body_color }}color:{{ .body_color }}{{ end }}">{{.body | markdownify }}</div>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
@@ -98,67 +99,77 @@
 {{ end }}
 
 {{ if eq "text_and_form" .type }}
-<div class="section relative bg-cover bg-no-repeat bg-center" style="{{ if .background_color }}background-color:{{ .background_color }}{{ end }};{{ if .background_image }}background-image:url({{ .background_image }}){{ end }}">
+<div class="section relative bg-cover bg-no-repeat bg-center"
+    style="{{ if .background_color }}background-color:{{ .background_color }}{{ end }};{{ if .background_image }}background-image:url({{ .background_image }}){{ end }}">
     <div>
-      <div class="container mx-auto">
-        <div class="md:flex md:items-center">
-          <div class="md:w-1/2">
-            <div class="content" style="{{ if .body_color }}color:{{ .body_color }}{{ end }}">{{.body | markdownify }}</div>
-          </div>
-          <div class="md:w-1/2">
-            <div class="text-form">
-              {{ with .form.heading }}
-                <h2 class="text-2xl md:text-3xl font-semibold">{{ . }}</h2>
-              {{ end }}
-              {{ with .form.body }}
-                <div class="md-content mt-4">
-                  {{ . | markdownify }}
+        <div class="container mx-auto">
+            <div class="md:flex md:items-center">
+                <div class="md:w-1/2">
+                    <div class="content" style="{{ if .body_color }}color:{{ .body_color }}{{ end }}">{{.body |
+                        markdownify }}</div>
                 </div>
-              {{ end }}
-            <div class="p-4" style="background-color:{{ .form_background_color }}">
-                <div class="content">
-                    {{ .form_body | markdownify }}
+                <div class="md:w-1/2">
+                    <div class="text-form">
+                        {{ with .form.heading }}
+                        <h2 class="text-2xl md:text-3xl font-semibold">{{ . }}</h2>
+                        {{ end }}
+                        {{ with .form.body }}
+                        <div class="md-content mt-4">
+                            {{ . | markdownify }}
+                        </div>
+                        {{ end }}
+                        <div class="p-4" style="background-color:{{ .form_background_color }}">
+                            <div class="content">
+                                {{ .form_body | markdownify }}
+                            </div>
+                            <form name="Website Contact Form Widget" method="POST" netlify-honeypot="bot-field"
+                                data-netlify="true" class="grid grid-cols-6 gap-4 mt-10" action="/thank-you">
+                                <input name="bot-field" type="hidden" />
+                                <input type="hidden" name="Subject" value="Website Contact Form Widget">
+                                <input name="Source" type="hidden" value="{{ .Permalink }}" />
+                                <div class="col-span-6">
+                                    <input
+                                        class="w-full py-2 px-3 border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
+                                        type="text" placeholder="Name" name="Name">
+                                </div>
+                                <div class="col-span-3">
+                                    <input
+                                        class="w-full py-2 px-3 border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
+                                        type="text" placeholder="Phone" name="Phone">
+                                </div>
+                                <div class="col-span-3">
+                                    <input
+                                        class="w-full py-2 px-3 border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
+                                        type="text" placeholder="Email" name="Email">
+                                </div>
+                                <div class="col-span-6">
+                                    <textarea
+                                        class="w-full py-2 px-3 border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
+                                        rows="5" placeholder="Your Message" name="Message"></textarea>
+                                </div>
+                                <div class="col-span-2">
+                                    <button class="primary-button formSubmit" type="submit">Send Email</button>
+                                </div>
+                                <div class="col-span-2 content">
+                                    {{ $.Site.Data.appearance.form.form_disclaimer | markdownify }}
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <form name="Website Contact Form Widget" method="POST" netlify-honeypot="bot-field" data-netlify="true" class="grid grid-cols-6 gap-4 mt-10" action="/thank-you">
-                    <input name="bot-field" type="hidden" />
-                    <input type="hidden" name="Subject" value="Website Contact Form Widget">
-                    <input name="Source" type="hidden" value="{{ .Permalink }}" />
-                    <div class="col-span-6">
-                      <input class="w-full py-2 px-3 border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
-                        type="text" placeholder="Name" name="Name">
-                    </div>
-                    <div class="col-span-3">
-                      <input class="w-full py-2 px-3 border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
-                        type="text" placeholder="Phone" name="Phone">
-                    </div>
-                    <div class="col-span-3">
-                      <input class="w-full py-2 px-3 border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
-                        type="text" placeholder="Email" name="Email">
-                    </div>
-                    <div class="col-span-6">
-                      <textarea class="w-full py-2 px-3 border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
-                        rows="5" placeholder="Your Message" name="Message"></textarea>
-                    </div>
-                    <div class="col-span-2">
-                      <button class="primary-button formSubmit" type="submit">Send Email</button>
-                    </div>
-                    <div class="col-span-2 content">
-                      {{ $.Site.Data.appearance.form.form_disclaimer | markdownify }}
-                    </div>
-                  </form>
             </div>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
+</div>
 {{ end }}
 
 {{ if eq "featured_listings_idx" .type }}
-<div class="section relative bg-cover bg-no-repeat bg-center" style="{{ if .background_color }}background-color:{{ .background_color }}{{ end }};{{ if .background_image }}background-image:url({{ .background_image }}){{ end }}">    <div class="container mx-auto">
+<div class="section relative bg-cover bg-no-repeat bg-center"
+    style="{{ if .background_color }}background-color:{{ .background_color }}{{ end }};{{ if .background_image }}background-image:url({{ .background_image }}){{ end }}">
+    <div class="container mx-auto">
         <div class="text-center mb-10">
-            <div class="content" style="{{ if .body_color }}color:{{ .body_color }}{{ end }}">{{.body | markdownify }}</div>
+            <div class="content" style="{{ if .body_color }}color:{{ .body_color }}{{ end }}">{{.body | markdownify }}
+            </div>
         </div>
 
         <script>
@@ -172,13 +183,16 @@
         </script>
     </div>
 </div>
+</div>
 {{ end }}
 
 {{ if eq "featured_gallery_idx" .type }}
-<div class="section relative bg-cover bg-no-repeat bg-center" style="{{ if .background_color }}background-color:{{ .background_color }}{{ end }};{{ if .background_image }}background-image:url({{ .background_image }}){{ end }}">    <div class="container mx-auto">
+<div class="section relative bg-cover bg-no-repeat bg-center"
+    style="{{ if .background_color }}background-color:{{ .background_color }}{{ end }};{{ if .background_image }}background-image:url({{ .background_image }}){{ end }}">
     <div class="container mx-auto">
         <div class="text-center mb-10">
-            <div class="content" style="{{ if .body_color }}color:{{ .body_color }}{{ end }}">{{.body | markdownify }}</div>
+            <div class="content" style="{{ if .body_color }}color:{{ .body_color }}{{ end }}">{{.body | markdownify }}
+            </div>
         </div>
         <script>
             document.currentScript.replaceWith(ihfKestrel.render({
@@ -197,11 +211,13 @@
 </div>
 {{ end }}
 
-{{ if eq "featured_gallery_idx" .type }}
-<div class="section relative bg-cover bg-no-repeat bg-center" style="{{ if .background_color }}background-color:{{ .background_color }}{{ end }};{{ if .background_image }}background-image:url({{ .background_image }}){{ end }}">    <div class="container mx-auto">
-    <div class="container mx-auto">
+{{ if eq "quick_search_idx" .type }}
+<div class="py-10 bg-cover bg-no-repeat bg-center"
+    style="{{ if .background_color }}background-color:{{ .background_color }}{{ end }};{{ if .background_image }}background-image:url({{ .background_image }}){{ end }}">
+    <div class="max-w-3xl mx-auto px-4">
         <div class="text-center mb-10">
-            <div class="content" style="{{ if .body_color }}color:{{ .body_color }}{{ end }}">{{.body | markdownify }}</div>
+            <div class="content" style="{{ if .body_color }}color:{{ .body_color }}{{ end }}">{{.body | markdownify }}
+            </div>
         </div>
         <script>
             document.currentScript.replaceWith(ihfKestrel.render({

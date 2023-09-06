@@ -19,8 +19,8 @@ home_sections:
       ### Send a message
 
       This is the form field part
-    background_color: "#000"
-    body_color: "#ffffff"
+    background_color: "#fff"
+    body_color: "#000"
     form_background_color: "#fff"
   - body: >-
       ## Let's get it

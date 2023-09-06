@@ -131,3 +131,10 @@ footer h2 {
 footer * {
     color: var(--footer-text-color);
 }
+
+/* COPY AND PASTE INTO IHOMEFINDER CSS */
+
+a.ui-button-contained-primary {
+    background-color: var(--primary-button-background)!important;
+    color: var(--primary-button-text-color);
+}
