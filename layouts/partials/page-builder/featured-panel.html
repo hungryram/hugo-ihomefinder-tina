@@ -13,25 +13,29 @@
     <div class="swiper-container-fPanel relative mt-16 overflow-hidden">
         <div class="swiper-wrapper">
         {{ range index .sectionData "featured_blocks" }}
-        <div class="swiper-slide">
-          <div class="relative w-full h-80">
-            {{ with .image }}
-            <img
-              src="{{ . }}"
-              alt=""
-              class="absolute inset-0 -z-10 h-full w-full object-cover"
-            />
-            <div class="absolute top-0 bottom-0 left-0 right-0 bg-black opacity-30"></div>
-            {{ end }}
-            {{ with .body }}
-            <div
-              class="mx-auto max-w-2xl content flex items-center h-full md:px-4 px-16 text-white relative z-10 text-center"
-            >
-              {{ . | markdownify }}
+        <div class="swiper-slide group">
+          <a href="{{ .button_link }}">
+            <div class="relative w-full h-80">
+              {{ with .image }}
+              <img
+                src="{{ . }}"
+                alt=""
+                class="absolute inset-0 -z-10 h-full w-full object-cover"
+              />
+              <!-- Add opacity transition class here -->
+              <div class="absolute top-0 bottom-0 left-0 right-0 bg-black opacity-30 group-hover:opacity-50 transition-opacity"></div>
+              {{ end }}
+              {{ with .body }}
+              <div
+                class="mx-auto max-w-2xl content flex items-center h-full md:px-4 px-16 text-white relative z-10 text-center"
+              >
+                {{ . | markdownify }}
+              </div>
+              {{ end }}
             </div>
-            {{ end }}
-          </div>
+          </a>
         </div>
+        
         {{ end }}
       </div>
       <!-- Add Navigation -->

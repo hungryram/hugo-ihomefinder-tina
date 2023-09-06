@@ -64,7 +64,7 @@ home_sections:
           tWidgets define the data type and interface for entry fields. Decap
           CMS comes with several built-in widgets. Click the widget names in t
         image: /images/uploads/11-32-31-ave-01-hero-p2-medium-res.jpg
-        button_link: /contact
+        button_link: /sitemap
     body: Widgets define the data type and interface for entry fields. Decap CMS
       comes with several built-in widgets. Click the widget names in tWidgets
       define the data type and interface for entry fields. Decap CMS comes with
