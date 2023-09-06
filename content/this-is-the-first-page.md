@@ -1,5 +1,6 @@
 ---
 title: This is the first page
+hide_banner: true
 page_builder:
   - type: hero
     heading: My HEading

@@ -6,6 +6,7 @@ home_sections:
       This is the body of the hero
 
       New paragraph
+    enable_quick_search: true
     heading: This is the Hero
     color: rgba(0, 0, 0, 0.6)
     button_link: /contact

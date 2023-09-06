@@ -135,6 +135,10 @@ collections:
                 name: "hero"
                 widget: "object"
                 fields:
+                  - label: "Enable IDX Quick Search"
+                    name: "enable_quick_search"
+                    widget: "boolean"
+                    required: false
                   - label: "Heading"
                     name: "heading"
                     widget: "string"
@@ -296,6 +300,10 @@ collections:
       - label: "Title"
         name: "title"
         widget: "string"
+      - label: "Hide Banner"
+        name: "hide_banner"
+        widget: "boolean"
+        required: false
       - label: "Page Builder"
         name: "page_builder"
         widget: "list"
