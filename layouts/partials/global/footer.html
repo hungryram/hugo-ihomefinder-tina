@@ -3,7 +3,7 @@
 {{ $footerContact := .Site.Data.profile.contact_information }}
 {{ $footerSocial := .Site.Data.profile.social_media }}
 
-<footer class="bg-cover bg-center bg-no-repeat bg-blend-overlay {{ with $footer.background_image }}bg-[url({{ . | absURL }})] bg-center bg-no-repeat bg-cover bg-blend-overlay{{ else }}bg-[{{ $footer.footer_background_color }}]{{ end }} py-16">
+<footer class="bg-cover relative bg-center bg-no-repeat py-20"  style="{{ if $footer.background_color }}background-color:{{ $footer.background_color }}{{ end }};{{ if $footer.footer_background }}background-image:url({{ $footer.footer_background }}){{ end }}">
     <div class="container mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-4 {{ if $footer.enable_black_text }}text-white{{ else }}text-black{{ end }}">
             <div>
