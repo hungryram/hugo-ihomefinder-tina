@@ -69,6 +69,14 @@ collections:
         label: Navigation
         name: navigation
         fields:
+          - label: Top Header Color
+            name: top_header_color
+            widget: color
+            required: false
+          - label: Top Header Text Color
+            name: top_header_text_color
+            widget: color
+            required: false
           - label: Header Color
             name: header_color
             widget: color
@@ -97,14 +105,6 @@ collections:
         label: "Appearance Configuration" # Label for the file in the CMS
         file: "data/appearance.yml" # Path to your appearance YAML file
         fields:
-          - { name: "header_top_header_color", label: "Top Header Color", widget: "color", required: false }
-          - { name: "header_header_background_color", label: "Header Background Color", widget: "color", required: false }
-          - { name: "header_enable_white_text", label: "Enable White Text", widget: "boolean", required: false }
-          - { name: "header_enable_white_text_top", label: "Enable White Text (Top)", widget: "boolean", required: false }
-          - { name: "header_transparent_background", label: "Transparent Background", widget: "boolean", required: false }
-          - { name: "header_call_to_action_link", label: "Call to Action Link", widget: "string", required: false }
-          - { name: "header_call_to_action_label", label: "Call to Action Label", widget: "string", required: false }
-          - { name: "header_remove_call_to_action", label: "Remove Call to Action", widget: "boolean", required: false }
           - { name: "colors_primary_button_background_color", label: "Primary Button Background Color", widget: "color", required: false }
           - { name: "colors_primary_button_text_color", label: "Primary Button Text Color", widget: "color", required: false }
           - { name: "colors_accent", label: "Accent Color", widget: "color", required: false }

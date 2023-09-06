@@ -1,5 +1,21 @@
 {{ $branding := .Site.Data.branding }}
 {{ $profile := .Site.Data.profile }}
+<div id="top-bar">
+  <div class="container mx-auto">
+    <div class="md:flex justify-end text-right">
+      <div class="w-full py-2">
+        <ul class="flex justify-end space-x-10">
+          {{ if $profile.contact_information.contact.direct }}<li><a href="tel:{{ $profile.contact_information.contact.direct }}"><span class="font-medium">Direct:</span> {{ $profile.contact_information.contact.direct }}</a>
+          </li>{{ end }}
+          {{ if $profile.contact_information.contact.office }}<li><a href="tel:{{ $profile.contact_information.contact.office }}"><span class="font-medium">Office:</span> {{ $profile.contact_information.contact.office }}</a>
+          </li>{{ end }}
+          {{ if $profile.contact_information.contact.email }}<li><a href="mailto:{{ $profile.contact_information.contact.email }}"><span class="font-medium">Email:</span> {{ $profile.contact_information.contact.email }}</a>
+          </li>{{ end }}
+      </ul>
+      </div>
+    </div>
+  </div>
+</div>
 <header>
   <nav class="flex items-center justify-between p-6 lg:px-8 container mx-auto" aria-label="Global">
     <div class="flex lg:flex-1">
