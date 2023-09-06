@@ -1,5 +1,6 @@
 footer_logo: https://www.1stindependencerealty.com/uploads/1st-independence.png
 footer_background: /images/uploads/2-wyndam-selects-1-.jpg
+footer_overlay: rgba(0, 0, 0, 0.72)
 footer_background_color: "#966969"
 footer_heading_color: "#fff"
 footer_text_color: "#fff"
