@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
 {{- $colors := .Site.Data.appearance -}}
 <script src="https://cdn.tailwindcss.com"></script>
 <!-- SCHEMA -->
@@ -29,15 +31,6 @@
 {{ partial "global/schema" . }}
 {{- end -}}
 
-<script src="https://kestrel.idxhome.com/ihf-kestrel.js"></script>
-<script>
-	window.ihfKestrel = window.ihfKestrel || {};
-	ihfKestrel.config = {
-		platform: "",
-		activationToken: "3779C949-155D-6043-0911FD9A208A875D",
-	};
-</script>
-
 <!-- START SEO -->
 {{ partial "global/seo" . }}
 
@@ -51,10 +44,6 @@
 
 <!-- STYLESHEETS AND RESOURCES-->
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/globals.css">
-
-{{ if $.Site.Data.idx.enable_google_recaptcha }}
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-{{ end }}
 
 <!-- CUSTOM SCRIPT -->
 {{ .Site.Data.developer.custom_script | safeHTML }}
