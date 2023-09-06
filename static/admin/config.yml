@@ -293,6 +293,9 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
       - label: "Page Builder"
         name: "page_builder"
         widget: "list"
