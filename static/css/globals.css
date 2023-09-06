@@ -1,5 +1,7 @@
 * {
     font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+
 }
 
 .section {
@@ -30,6 +32,10 @@ button {
     display: inline-block;
 }
 
+.accent {
+    color: var(--primary-accent-color)
+}
+
 /* CONTENT */
 body .content h1, 
 body .content h2, 
@@ -40,6 +46,7 @@ body .content h6 {
   line-height: 1.374;
   margin-bottom: 1.5rem;
   margin-top: 0.5rem;
+  font-weight: 400;
 }
 
 .content p + p {
@@ -118,6 +125,19 @@ div#social-share div {
 .share-button.email:hover { 
     color: #fff;
     background-color: #000000; 
+}
+
+/* SWIPER JS */
+
+div.swiper-button-next,
+.swiper-button-prev {
+    background: white;
+}
+
+div.swiper-button-next:after,
+div.swiper-button-prev:after {
+    font-size: 15px;
+    color: var(--primary-accent-color);
 }
 
 

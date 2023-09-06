@@ -13,3 +13,5 @@ nav_items:
     path: /
   - label: Contact
     path: /contact
+  - label: Sitemap
+    path: /sitemap

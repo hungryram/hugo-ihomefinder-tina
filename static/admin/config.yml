@@ -69,6 +69,14 @@ collections:
         label: Navigation
         name: navigation
         fields:
+          - label: Header Color
+            name: header_color
+            widget: color
+            required: false
+          - label: Header Text Color
+            name: header_text_color
+            widget: color
+            required: false
           - label: Navigation
             name: nav_items
             widget: list

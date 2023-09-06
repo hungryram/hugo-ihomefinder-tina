@@ -22,7 +22,7 @@
 {{ partial "page-builder/team-section" (dict "sectionData" .) }}
 <!-- Swiper Container -->
 <div class="large-container mx-auto overflow-hidden mb-20">
-    <div class="swiper-container-team">
+    <div class="swiper-container-team relative">
         <div class="swiper-wrapper max-w-max mx-auto">
             {{ range (where $.Site.RegularPages "Section" "team") }}
             <div class="swiper-slide">
@@ -58,11 +58,6 @@
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-
     });
 </script>
 {{ end }}

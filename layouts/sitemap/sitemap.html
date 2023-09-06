@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div class="section">
+    <div class="max-w-sm mx-auto content text-center">
+        <h2 class="h3 text-bold border-b">Sitemap</h2>
+        <ul class="grid grid-cols-1 gap-2">
+            {{ range $.Site.Pages.ByTitle }}
+            {{ if ne .Title "" }}
+            <li>
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </li>
+            {{ end }}
+            {{ end }}
+        </ul>
+    </div>
+</div>
+{{ end }}
