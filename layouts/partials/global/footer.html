@@ -5,9 +5,9 @@
 
 <footer class="bg-cover relative bg-center bg-no-repeat py-20" style="{{ if $footer.background_color }}background-color:{{ $footer.background_color }}{{ end }}">
     <img src="{{ $footer.footer_background }}" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover">
-    <div class="absolute left-0 right-0 bottom-0 top-0" style="background-color: {{ $footer.overlay | safeCSS }}"></div>
+    <div class="absolute left-0 right-0 bottom-0 top-0" style="background-color: {{ $footer.footer_overlay | safeCSS }}"></div>
 
-    <div class="container mx-auto">
+    <div class="container mx-auto relative z-10">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-4 {{ if $footer.enable_black_text }}text-white{{ else }}text-black{{ end }}">
             <div>
                 {{ with $footer.logo }}
@@ -55,28 +55,25 @@
             </div>
         </div>
     </div>
-    <div class="container mx-auto">
+    <div class="container mx-auto relative z-10">
         <div class="grid">
             <div class="w-full text-center">
-                <ul class="mt-4">
-                    {{ range $footer.important_documents }}
-                    <li><a href="{{ .document | absURL }}" target="_blank" class="font-semibold">{{ .name }}</a></li>
-                    {{ end }}
+                <ul class="mt-10">
                     <li><small>{{ $footer.disclaimer }}</small></li>
                     <li><small>&copy; Copyright {{ dateFormat "2006" now }}, {{ $companyName }} {{ if not $footer.remove_credit }}&middot; <a href="https://www.hungryram.com/services/agent-idx-websites/" target="_blank" class="font-semibold" rel="nofollow">Real Estate Website</a> Powered by <a href="https://www.hungryram.com">Hungry Ram Web Design</a>{{ end }}</small></li>
-                    {{ if $footer.equal_housing_logo }}
+                    {{ if $footer.enable_equal_housing_logo }}
                     <li class="inline-block mr-4"><img src="https://res.cloudinary.com/hungryram19/image/upload/v1628532562/Resources/equal-housing-opportunity-transparent_jdomdn.png" alt="equal housing opportunity logo" width="30" /></li>
                     {{ end }}
-                    {{ if $footer.mls_logo }}
+                    {{ if $footer.enable_mls_logo }}
                     <li class="inline-block mr-4"><img src="https://res.cloudinary.com/hungryram19/image/upload/v1628532562/Resources/mls-logo_bpy61v.png" alt="mls logo" width="80" /></li>
                     {{ end }}
-                    {{ if $footer.realtor_logo }}
+                    {{ if $footer.enable_realtor_logo }}
                     <li class="inline-block"><img src="https://res.cloudinary.com/hungryram19/image/upload/v1628532562/Resources/REALTOR-mark_qhm0id.png" alt="REALTOR® logo" width="40" /></li>
                     {{ end }}
                 </ul>
             </div>
         </div>
-        <div class="grid py-2">
+        <div class="grid py-2 relative z-10">
             <div class="flex justify-center">
                 <ul class="hr-legals">
                     {{ range where $.Site.Pages.ByWeight "Type" "legal" }}
