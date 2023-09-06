@@ -13,6 +13,15 @@ home_sections:
     overlayColor: rgba(75, 75, 75, 0.73)
     type: hero
     image: /images/uploads/2-wyndam-selects-1-.jpg
+  - type: quick_search_idx
+    body: "## Search Homes"
+    form_body: |-
+      ### Send a message
+
+      This is the form field part
+    background_color: "#000"
+    body_color: "#ffffff"
+    form_background_color: "#fff"
   - body: >-
       ## Let's get it
 
@@ -86,9 +95,9 @@ home_sections:
       This is the form field part
     background_color: "#000"
     body_color: "#ffffff"
-    background_image: '/images/uploads/2-wyndam-selects-1-.jpg'
+    background_image: /images/uploads/2-wyndam-selects-1-.jpg
     overlayColor: rgba(75, 75, 75, 0.73)
-    form_background_color: '#fff'
+    form_background_color: "#fff"
   - type: featured_listings_idx
     body: |-
       ## Our Featured Listings
@@ -100,17 +109,5 @@ home_sections:
       This is the form field part
     background_color: "#000"
     body_color: "#ffffff"
-    form_background_color: '#fff'
-  - type: quick_search_idx
-    body: |-
-      ## Our Featured Listings Slider
-
-      This is the form section
-    form_body: |-
-      ### Send a message
-
-      This is the form field part
-    background_color: "#000"
-    body_color: "#ffffff"
-    form_background_color: '#fff'
+    form_background_color: "#fff"
 ---
