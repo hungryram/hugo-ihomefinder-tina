@@ -20,6 +20,16 @@
     padding-right: 1rem;
 }
 
+/* NAVBAR */
+
+header {
+    background-color: var(--header-background-color);
+}
+
+#menuLinks a {
+    color: var(--header-text-color);
+}
+
 .primary-button,
 [type=submit], 
 button {
