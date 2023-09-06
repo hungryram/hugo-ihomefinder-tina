@@ -68,4 +68,25 @@ home_sections:
       This is the team section
     background_color: "#343434"
     body_color: "#ffffff"
+  - type: blog_section
+    body: |-
+      ## Our Blog
+
+      This is the blog section
+    background_color: "#343434"
+    body_color: "#ffffff"
+  - type: text_and_form
+    body: |-
+      ## Our Form
+
+      This is the form section
+    form_body: |-
+      ### Send a message
+
+      This is the form field part
+    background_color: "#000"
+    body_color: "#ffffff"
+    background_image: '/images/uploads/2-wyndam-selects-1-.jpg'
+    overlayColor: rgba(75, 75, 75, 0.73)
+    form_background_color: '#fff'
 ---

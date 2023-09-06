@@ -12,14 +12,22 @@
     padding-right: 1rem;
 }
 
-.primary-button {
-    background-color: var(--primary-button-background);
+.large-container {
+    max-width: 1536px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.primary-button,
+[type=submit], 
+button {
+    background-color: var(--primary-button-background)!important;
     color: var(--primary-button-text-color);
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 25px;
     padding-right: 25px;
-    display: block;
+    display: inline-block;
 }
 
 /* CONTENT */

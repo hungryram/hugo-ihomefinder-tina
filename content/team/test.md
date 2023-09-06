@@ -1,8 +1,8 @@
 ---
-layout: "team"
-type: "team"
+layout: team
+type: team
 Section: team
-title: Ram Dettmer
+title: testsss
 position: REALTOR
 image: /images/uploads/swift.ai-logo-01.jpg
 address:

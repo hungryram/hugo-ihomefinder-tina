@@ -2,27 +2,160 @@
 {{ partial "global/navbar" . }}
 {{ range .Params.home_sections }}
 
-    {{ if eq "text-and-image" .type }}
-    {{ partial "page-builder/call-to-action" (dict "sectionData" .) }}
-    {{ end }}
-
-    {{ if eq "hero" .type }}
-    {{ partial "page-builder/hero" (dict "sectionData" .) }}
-    {{ end }}
-
-    {{ if eq "featured_grid" .type }}
-    {{ partial "page-builder/featured-grid" (dict "sectionData" .) }}
-    {{ end }}
-
-    {{ if eq "featured_Panel" .type }}
-    {{ partial "page-builder/featured-panel" (dict "sectionData" .) }}
-    {{ end }}
-
-    {{ if eq "team_section" .type }}
-    {{ partial "page-builder/team-section" (dict "sectionData" .) }}
-    {{ end }}
-    
-
+{{ if eq "text-and-image" .type }}
+{{ partial "page-builder/call-to-action" (dict "sectionData" .) }}
 {{ end }}
+
+{{ if eq "hero" .type }}
+{{ partial "page-builder/hero" (dict "sectionData" .) }}
+{{ end }}
+
+{{ if eq "featured_grid" .type }}
+{{ partial "page-builder/featured-grid" (dict "sectionData" .) }}
+{{ end }}
+
+{{ if eq "featured_Panel" .type }}
+{{ partial "page-builder/featured-panel" (dict "sectionData" .) }}
+{{ end }}
+
+{{ if eq "team_section" .type }}
+{{ partial "page-builder/team-section" (dict "sectionData" .) }}
+<!-- Swiper Container -->
+<div class="large-container mx-auto overflow-hidden mb-20">
+    <div class="swiper-container-team">
+        <div class="swiper-wrapper max-w-max mx-auto">
+            {{ range (where $.Site.RegularPages "Section" "team") }}
+            <div class="swiper-slide">
+                {{ partial "templates/team-card" (dict "Permalink" .Permalink "title" .Title "image" .Params.image
+                "image_alt" .Params.image_alt "position" .Params.position ) }}
+            </div>
+            {{ end }}
+        </div>
+
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- Add Navigation Buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</div>
+<!-- Swiper Initialization Script -->
+<script>
+    var swiper = new Swiper('.swiper-container-team', {
+        spaceBetween: 10,      // Adjust as needed
+        breakpoints: {
+            // For screens less than or equal to 640px wide (mobile)
+            640: {
+                slidesPerView: 1,
+            },
+            // For screens greater than 640px wide (tablet and above)
+            768: {
+                slidesPerView: 4,
+            },
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+
+    });
+</script>
+{{ end }}
+
+{{ if eq "blog_section" .type }}
+
+<div class="section" style="{{ if .background_color }}background-color:{{ .background_color }}{{ end }};{{ if .background_image }}background-image:url({{ .background_image }}){{ end }}">
+    <div class="container mx-auto">
+        <div class="content" style="{{ if .body_color }}color:{{ .body_color }}{{ end }}">{{.body | markdownify }}</div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
+            {{ range first 4 (where $.Site.RegularPages "Type" "blog") }}
+            <article
+                class="relative isolate flex flex-col justify-end overflow-hidden bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80">
+                <img src="{{ .Params.thumbnail }}" alt="{{ .Title }}"
+                    class="absolute inset-0 -z-10 h-full w-full object-cover">
+                <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
+                <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
+
+                <div class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
+                    <time datetime="2020-03-16" class="mr-8">{{ dateFormat "January 02, 2006" (.Params.date) }}</time>
+                </div>
+                <h3 class="mt-3 text-lg font-semibold leading-6 text-white">
+                    <a href="{{ .Permalink }}">
+                        <span class="absolute inset-0"></span>
+                        {{ .Title }}
+                    </a>
+                </h3>
+            </article>
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ end }}
+
+{{ if eq "text_and_form" .type }}
+<div class="section relative bg-cover bg-no-repeat bg-center" style="{{ if .background_color }}background-color:{{ .background_color }}{{ end }};{{ if .background_image }}background-image:url({{ .background_image }}){{ end }}">
+    <div>
+      <div class="container mx-auto">
+        <div class="md:flex md:items-center">
+          <div class="md:w-1/2">
+            <div class="content" style="{{ if .body_color }}color:{{ .body_color }}{{ end }}">{{.body | markdownify }}</div>
+          </div>
+          <div class="md:w-1/2">
+            <div class="text-form">
+              {{ with .form.heading }}
+                <h2 class="text-2xl md:text-3xl font-semibold">{{ . }}</h2>
+              {{ end }}
+              {{ with .form.body }}
+                <div class="md-content mt-4">
+                  {{ . | markdownify }}
+                </div>
+              {{ end }}
+            <div class="p-4" style="background-color:{{ .form_background_color }}">
+                <div class="content">
+                    {{ .form_body | markdownify }}
+                </div>
+                <form name="Website Contact Form Widget" method="POST" netlify-honeypot="bot-field" data-netlify="true" class="grid grid-cols-6 gap-4 mt-10" action="/thank-you">
+                    <input name="bot-field" type="hidden" />
+                    <input type="hidden" name="Subject" value="Website Contact Form Widget">
+                    <input name="Source" type="hidden" value="{{ .Permalink }}" />
+                    <div class="col-span-6">
+                      <input class="w-full py-2 px-3 border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
+                        type="text" placeholder="Name" name="Name">
+                    </div>
+                    <div class="col-span-3">
+                      <input class="w-full py-2 px-3 border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
+                        type="text" placeholder="Phone" name="Phone">
+                    </div>
+                    <div class="col-span-3">
+                      <input class="w-full py-2 px-3 border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
+                        type="text" placeholder="Email" name="Email">
+                    </div>
+                    <div class="col-span-6">
+                      <textarea class="w-full py-2 px-3 border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
+                        rows="5" placeholder="Your Message" name="Message"></textarea>
+                    </div>
+                    <div class="col-span-2">
+                      <button class="primary-button formSubmit" type="submit">Send Email</button>
+                    </div>
+                    <div class="col-span-2 content">
+                      {{ $.Site.Data.appearance.form.form_disclaimer | markdownify }}
+                    </div>
+                  </form>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{ end }}
+
+
+{{ end }} <!-- end home section range-->
 
 {{ partial "global/footer" . }}
