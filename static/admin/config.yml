@@ -128,6 +128,9 @@ collections:
           - { name: "footer_text_color", label: "Footer Background Color", widget: "color", required: false }
           - { name: "about", label: "About", widget: "text", required: false }
           - { name: "disclaimer", label: "Disclaimer", widget: "markdown", required: false }
+          - { name: "enable_realtor_logo", label: "Enable Realtor Logo", widget: "boolean", required: false }
+          - { name: "enable_equal_housing_logo", label: "Enable Equal Housing Logo", widget: "boolean", required: false }
+          - { name: "enable_mls_logo", label: "Enable MLS Logo", widget: "boolean", required: false }
   - name: "home"
     label: "Home Page"
     files:
