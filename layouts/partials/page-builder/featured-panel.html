@@ -5,7 +5,7 @@
 >
 <div class="container mx-auto" style="{{ with index .sectionData "body_color" }}color:{{ . }}{{ end }}">
     {{ with index .sectionData "body" }}
-    <div class="mx-auto max-w-2xl lg:text-center content">
+    <div class="mx-auto max-w-2xl text-center content">
         {{ . | markdownify }}
     </div>
     {{ end }}
@@ -69,7 +69,7 @@
 <div class="section" style="{{ if index .sectionData "background_color" }}background-color:{{ index .sectionData "background_color" }}{{ end }};{{ if index .sectionData "background_image" }}background-image:url({{ index .sectionData "background_image" }}){{ end }}">
     <div class="container mx-auto" style="{{ with index .sectionData "body_color" }}color:{{ . }}{{ end }}">
         {{ with index .sectionData "body" }}
-        <div class="mx-auto max-w-2xl lg:text-center content">
+        <div class="mx-auto max-w-2xl text-center content">
             {{ . | markdownify }}
         </div>
         {{ end }}

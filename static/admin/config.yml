@@ -544,6 +544,34 @@ collections:
           - {label: "Office Number", name: "office", widget: "string", required: false}
           - {label: "email", name: "email", widget: "string", required: false}
 
+# OFFICE
+  - name: "office"
+    label: "Office" 
+    folder: "/content/office"
+    create: true
+    slug: "{{title}}" 
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "office"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Address"
+        name: "address"
+        widget: "object"
+        collapsed: true
+        fields: 
+          - {label: "Street Address", name: "street", widget: "string", required: false}
+          - {label: "City", name: "city", widget: "string", required: false}
+          - {label: "Postal Code", name: "post-code", widget: "string", required: false}
+      - label: "Contact"
+        name: "contact"
+        widget: "object"
+        collapsed: true
+        fields: 
+          - {label: "Direct Number", name: "direct", widget: "string", required: false}
+          - {label: "Office Number", name: "office", widget: "string", required: false}
+          - {label: "email", name: "email", widget: "string", required: false}
+
 # TESTIMONIALS
   - name: "Testimonials" # Used in routes, e.g., /admin/collections/blog
     label: "testimonials" # Used in the UI

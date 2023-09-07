@@ -20,6 +20,57 @@
 
 {{ if eq "testimonial_section" .type }}
 {{ partial "page-builder/testimonials" (dict "sectionData" .) }}
+<div class="pb-10" style="{{ if .background_color }}background-color:{{ .background_color }}{{ end }};{{ if .background_image }}background-image:url({{ .background_image }}){{ end }}">    
+    <div class="mx-auto container">
+            <div class="swiper-container-testimonial overflow-hidden relative">
+                <div class="swiper-wrapper">
+                    {{ range first 8 (where $.Site.Pages "Type" "testimonials") }}
+                    <div class="swiper-slide bg-white h-full shadow-md">
+                        <div class="flex flex-col py-6 px-10">
+                            <figure class="flex flex-auto flex-col justify-between">
+                                <blockquote class="leading-8 text-gray-900">
+                                    {{ .Content }}
+                                </blockquote>
+                                <figcaption class="mt-10 flex items-center gap-x-6">
+                                {{ if .Params.image }}
+                                <img class="h-14 w-14 rounded-full bg-gray-50"
+                                src="{{ .Params.image }}"
+                                alt="{{ .Title }}">
+                                {{ end }}
+                                    <div class="text-base">
+                                        <div class="font-semibold text-gray-900">{{ .Title }}</div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+                <!-- Add pagination and navigation here if needed -->
+            </div>
+    </div>
+</div>
+
+<script>
+    var swiper = new Swiper('.swiper-container-testimonial', {
+        spaceBetween: 10,      // Adjust as needed
+        breakpoints: {
+            // For screens less than or equal to 640px wide (mobile)
+            640: {
+                slidesPerView: 1,
+            },
+            // For screens greater than 640px wide (tablet and above)
+            768: {
+                slidesPerView: 3,
+            },
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>
+
 {{ end }}
 
 {{ if eq "team_section" .type }}

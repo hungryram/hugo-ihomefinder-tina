@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="section">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto container">
         <div class="mx-auto max-w-xl text-center content">
             {{ range where .Site.Pages "Section" "testimonials" }}
             {{ if eq .File.BaseFileName "_index" }}
