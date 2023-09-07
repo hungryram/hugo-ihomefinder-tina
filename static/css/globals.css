@@ -22,6 +22,11 @@
 
 /* NAVBAR */
 
+#top-bar {
+    background-color: var(--top-header-background);
+    color: var(--top-header-text);
+}
+
 header {
     background-color: var(--header-background-color);
 }
@@ -155,6 +160,7 @@ div.swiper-button-prev:after {
 
 footer h2 {
     color: var(--footer-heading-color);
+    margin-bottom: 14px;
 }
 
 footer * {

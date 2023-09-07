@@ -108,6 +108,7 @@ collections:
           - { name: "colors_primary_button_background_color", label: "Primary Button Background Color", widget: "color", required: false }
           - { name: "colors_primary_button_text_color", label: "Primary Button Text Color", widget: "color", required: false }
           - { name: "colors_accent", label: "Accent Color", widget: "color", required: false }
+          - { name: "banner_image_overlay", label: "Banner Image Overlay", widget: "color", required: false }
           - { name: "banner_image", label: "Banner Image", widget: "image", required: false }
       - name: "data_branding" # This is the file name without the extension
         label: "Branding" # Label for the file in the CMS
