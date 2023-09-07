@@ -1,0 +1,28 @@
+{{ define "main" }}
+{{ $accent := $.Site.Data.appearance.colors.accent }}
+{{ $size := .Site.Data.developer }}
+
+<div class="section">
+    <div class="container mx-auto">
+        {{ $officeCount := len (where .Site.RegularPages "Section" "==" "office") }}
+        {{ if gt $officeCount 0 }}
+        {{ $paginator := .Paginate (where .Pages "Type" "office") 6 }}
+        <div role="list"
+            class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4">
+            {{ range $paginator.Pages.ByWeight }}
+            {{ if ne .Title "" }}
+            {{ partial "templates/team-card" (dict "Permalink" .Permalink "title" .Title "image" .Params.image "image_alt" .Params.image_alt "position" .Params.position ) }}
+            {{ end }}
+            {{ end }}
+        </div>
+        {{ else }}
+        <div class="uk-width-3-4@s">
+            <div class="inner-container">
+                <h4>No offices added yet</h4>
+                <p>Check back later for updated information</p>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

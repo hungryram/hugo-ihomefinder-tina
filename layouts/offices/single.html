@@ -1,0 +1,45 @@
+{{ define "main" }}
+<div class="section">
+    <div class="container mx-auto">
+        <div class="md:flex gap-20 justify-center">
+            <div class="md:w-1/2">
+                <div class="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8">
+                    <div class="lg:pr-4">
+                        <img class="h-full w-ful" src="{{ .Params.image }}" alt="{{ .Params.title }}">
+                      </div>
+                    </div>
+                    <dl class="mt-10 grid grid-cols-2 gap-5 content">
+                      <div>
+                        <dt class="text-sm font-semibold leading-6 text-gray-600">Email</dt>
+                        <dd class="font-bold leading-10 tracking-tight text-gray-900"><a href="mailto:{{ .Params.contact.email }}">{{ .Params.contact.email }}</a></dd>
+                      </div>
+                      <div>
+                        <dt class="text-sm font-semibold leading-6 text-gray-600">Phone</dt>
+                        <dd class="font-bold leading-10 tracking-tight text-gray-900"><a href="tel:{{ .Params.contact.direct }}">{{ .Params.contact.direct }}</a></dd>
+                      </div>
+                      <div>
+                        <dt class="text-sm font-semibold leading-6 text-gray-600">Office</dt>
+                        <dd class="font-bold leading-10 tracking-tight text-gray-900"><a href="tel:{{ .Params.contact.office }}">{{ .Params.contact.office }}</a></dd>
+                      </div>
+                      <div>
+                        <dt class="text-sm font-semibold leading-6 text-gray-600">Address</dt>
+                        <dd class="font-bold leading-10 tracking-tight text-gray-900">{{ .Params.address.street }}</dd>
+                      </div>
+                    </dl>
+            </div>
+            <div class="md:w-1/2">
+                <div class="content">
+                    <div class="text-base leading-7 text-gray-700 lg:max-w-lg">
+                      <p class="text-base font-semibold leading-7 accent">{{ .Params.position }}</p>
+                      <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{ .Params.title }}</h1>
+                      <div class="max-w-xl mt-10">
+                          {{ .Content }}
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{ end }}
