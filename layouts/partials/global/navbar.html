@@ -7,7 +7,7 @@
         <ul class="flex justify-end space-x-10">
           {{ if $profile.contact_information.contact.direct }}<li><a href="tel:{{ $profile.contact_information.contact.direct }}"><span class="font-medium">Direct:</span> {{ $profile.contact_information.contact.direct }}</a>
           </li>{{ end }}
-          {{ if $profile.contact_information.contact.office }}<li><a href="tel:{{ $profile.contact_information.contact.office }}"><span class="font-medium">Office:</span> {{ $profile.contact_information.contact.office }}</a>
+          {{ if $profile.contact_information.contact.office }}<li class="hidden md:block"><a href="tel:{{ $profile.contact_information.contact.office }}"><span class="font-medium">Office:</span> {{ $profile.contact_information.contact.office }}</a>
           </li>{{ end }}
           {{ if $profile.contact_information.contact.email }}<li><a href="mailto:{{ $profile.contact_information.contact.email }}"><span class="font-medium">Email:</span> {{ $profile.contact_information.contact.email }}</a>
           </li>{{ end }}
@@ -60,7 +60,7 @@
     </div>
     
     <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-      <a href="#" class="primary-button">Log in <span aria-hidden="true">&rarr;</span></a>
+      <a href="{{ .Site.Data.settings.call_to_action_link }}" class="primary-button">{{ .Site.Data.settings.call_to_action_text }}</a>
     </div>
   </nav>
   <!-- Mobile menu, show/hide based on menu open state. -->

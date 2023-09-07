@@ -27,6 +27,10 @@
     color: var(--top-header-text);
 }
 
+#top-bar a {
+    font-size: 13px;
+}
+
 header {
     background-color: var(--header-background-color);
 }
