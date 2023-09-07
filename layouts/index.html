@@ -18,6 +18,10 @@
 {{ partial "page-builder/featured-panel" (dict "sectionData" .) }}
 {{ end }}
 
+{{ if eq "testimonial_section" .type }}
+{{ partial "page-builder/testimonials" (dict "sectionData" .) }}
+{{ end }}
+
 {{ if eq "team_section" .type }}
 {{ partial "page-builder/team-section" (dict "sectionData" .) }}
 <!-- Swiper Container -->

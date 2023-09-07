@@ -273,6 +273,13 @@ collections:
                   - {label: "Body", name: "body", widget: "markdown", required: false}
                   - {label: "Background Color", name: "background_color", widget: "color", required: false}
                   - {label: "Body Color", name: "body_color", widget: "color", required: false}
+              - label: "Testimonials Section"
+                name: "testimonial_section"
+                widget: "object"
+                fields:
+                  - {label: "Body", name: "body", widget: "markdown", required: false}
+                  - {label: "Background Color", name: "background_color", widget: "color", required: false}
+                  - {label: "Body Color", name: "body_color", widget: "color", required: false}
               - label: "Text and Image"
                 name: "text-and-image"
                 widget: "object"
