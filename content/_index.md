@@ -87,30 +87,11 @@ home_sections:
       This is the blog section
     background_color: "#343434"
     body_color: "#ffffff"
-  - type: text_and_form
+  - type: testimonial_section
     body: |-
-      ## Our Form
+      ## Our Client Reviews
 
-      This is the form section
-    form_body: |-
-      ### Send a message
-
-      This is the form field part
-    background_color: "#000"
-    body_color: "#ffffff"
-    background_image: /images/uploads/2-wyndam-selects-1-.jpg
-    overlayColor: rgba(75, 75, 75, 0.73)
-    form_background_color: "#fff"
-  - type: featured_listings_idx
-    body: |-
-      ## Our Featured Listings
-
-      This is the form section
-    form_body: |-
-      ### Send a message
-
-      This is the form field part
-    background_color: "#000"
-    body_color: "#ffffff"
-    form_background_color: "#fff"
+      View all our reviews
+    background_color: "#cd7373"
+    body_color: "#cbc6c6"
 ---
