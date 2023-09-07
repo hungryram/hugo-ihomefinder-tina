@@ -100,7 +100,7 @@ collections:
                   - { label: Path, name: path, widget: string }
           - label: Call to Action Text
             name: call_to_action_text
-            widget: string,
+            widget: string
             required: false
           - label: Call to Action Link
             name: call_to_action_link
