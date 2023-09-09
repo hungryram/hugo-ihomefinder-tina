@@ -15,3 +15,10 @@ disclaimer: The content and data provided on this website are intended for
 enable_realtor_logo: true
 enable_equal_housing_logo: true
 enable_mls_logo: true
+nav_items:
+  - label: Home
+    path: /
+  - label: About
+    path: /about
+  - label: Contact
+    path: /contact
