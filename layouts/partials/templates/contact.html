@@ -1,0 +1,26 @@
+{{ $footerContact := .Site.Data.profile.contact_information }}
+
+<ul class="list-none p-0">
+    {{ if $footerContact.contact.direct }}
+    <li class="mb-2">
+        <a href="tel:{{ $footerContact.direct }}" class="hover:underline"><span class="font-semibold mr-4">Direct:</span>{{ $footerContact.contact.direct }}</a>
+    </li>
+    {{ end }}
+    {{ if $footerContact.contact.office }}
+    <li class="mb-2">
+        <a href="tel:{{ $footerContact.office }}" class="hover:underline"><span class="font-semibold mr-4">Office:</span>{{ $footerContact.contact.office }}</a>
+    </li>
+    {{ end }}
+    {{ if $footerContact.contact.email }}
+    <li class="mb-2">
+        <a href="mailto:{{ $footerContact.email }}" class="hover:underline"><span class="font-semibold mr-4">Email:</span>{{ $footerContact.contact.email }}</a>
+    </li>
+    {{ end }}
+    {{ if $footerContact.address.street }}
+    <li class="mb-2">
+        <span class="font-semibold mr-4">Address:</span>
+        <a target="_blank"
+            href="{{ if $footerContact.google_page_link }}{{ $footerContact.google_page_link }}{{ else }}https://www.google.com/maps/place/{{ $footerContact.address }},+{{ $footerContact.city }},+{{ $footerContact.state }}{{ end }}" class="hover:underline">{{ $footerContact.address.street }}, {{ $footerContact.address.city }}, {{ $footerContact.address.state }} {{ $footerContact.address.post_code }}</a>
+    </li>
+    {{ end }}
+</ul>

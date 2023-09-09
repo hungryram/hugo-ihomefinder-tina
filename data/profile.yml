@@ -3,7 +3,7 @@ contact_information:
   address:
     street: "5511 Mirage St. #1007"
     city: Yorba Linda
-    post-code: "92887"
+    post_code: "92887"
   contact:
     email: ram@hungryram.com
     direct: 951-454-2650

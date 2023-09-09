@@ -140,6 +140,12 @@ collections:
           - { name: "enable_realtor_logo", label: "Enable Realtor Logo", widget: "boolean", required: false }
           - { name: "enable_equal_housing_logo", label: "Enable Equal Housing Logo", widget: "boolean", required: false }
           - { name: "enable_mls_logo", label: "Enable MLS Logo", widget: "boolean", required: false }
+          - label: Quick Links
+            name: nav_items
+            widget: list
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: Path, name: path, widget: string, required: false }
   - name: "home"
     label: "Home Page"
     files:
@@ -534,7 +540,7 @@ collections:
         fields: 
           - {label: "Street Address", name: "street", widget: "string", required: false}
           - {label: "City", name: "city", widget: "string", required: false}
-          - {label: "Postal Code", name: "post-code", widget: "string", required: false}
+          - {label: "Postal Code", name: "post_code", widget: "string", required: false}
       - label: "Contact"
         name: "contact"
         widget: "object"
