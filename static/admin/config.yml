@@ -130,6 +130,7 @@ collections:
         file: "data/footer.yml" # Path to your appearance YAML file
         fields:
           - { name: "footer_logo", label: "Footer Logo", widget: "image", required: false }
+          - { name: "logo_width", label: "Footer Logo Width", widget: "number", required: false }
           - { name: "footer_background", label: "Footer Background", widget: "image", required: false }
           - { name: "footer_overlay", label: "Footer Overlay", widget: "color", required: false, enableAlpha: true }
           - { name: "footer_background_color", label: "Footer Background Color", widget: "color", required: false }

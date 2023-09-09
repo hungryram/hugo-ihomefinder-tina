@@ -19,5 +19,7 @@ nav_items:
     path: /contact
   - label: Sitemap
     path: /sitemap
+  - label: Office
+    path: /office
 call_to_action_text: Search Homes
 call_to_action_link: /search

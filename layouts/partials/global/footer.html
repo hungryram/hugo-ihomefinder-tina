@@ -10,11 +10,11 @@
     <div class="container mx-auto relative z-10">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-4 {{ if $footer.enable_black_text }}text-white{{ else }}text-black{{ end }}">
             <div>
-                {{ with $footer.logo }}
-                <img src="{{ . | absURL }}" alt="{{ $companyName }}" width="{{ $footer.logo_width }}" />
+                {{ with $footer.footer_logo }}
+                <img src="{{ . }}" alt="{{ $companyName }}" width="{{ $footer.logo_width }}" />
                 {{ else }}
                 <h2 class="font-medium">
-                    Real Estate Team
+                    {{ $companyName }}
                 </h2>
                 {{ end }}
                 <ul class="mt-4">
@@ -27,7 +27,7 @@
             </div>
             <div>
                 <h2 class="font-medium">
-                    Contact
+                    Contact Information
                 </h2>
                 <ul class="mt-4">
                     {{ partial "templates/contact" . }}
@@ -38,8 +38,8 @@
                     Quick Links
                 </h2>
                 <ul class="mt-4">
-                    {{ range $footer.additional_links }}
-                    <li><a href="{{ .link | absURL }}">{{ .name }}</a></li>
+                    {{ range $footer.nav_items }}
+                    <li class="mb-2"><a href="{{ .path }}" class="hover:underline">{{ .label }}</a></li>
                     {{ end }}
                 </ul>
             </div>
@@ -48,9 +48,9 @@
                     <h2 class="font-medium">
                         About
                     </h2>
-                    <p class="editable">
-                        Customizable footer allows you to visually edit the footer content.
-                    </p>
+                    <div class="content">
+                        {{ $footer.about }}
+                    </div>
                 </div>
             </div>
         </div>
@@ -77,7 +77,7 @@
             <div class="flex justify-center">
                 <ul class="hr-legals">
                     {{ range where $.Site.Pages.ByWeight "Type" "legal" }}
-                    <li class="inline-block mr-6"><small><a href="{{ .Permalink }}">{{ .Title }}</a></small></li>
+                    <li class="inline-block mx-6"><small><a href="{{ .Permalink }}">{{ .Title }}</a></small></li>
                     {{ end }}
                     <li class="inline-block mr-6">
                         <small>
