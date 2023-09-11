@@ -33,7 +33,4 @@ contact_information:
       		activationToken: "74FF8CF7-155D-6042-0C4804457FA68958",
       	};
       </script>
-    body_custom_code: |-
-      <script>
-      	document.currentScript.replaceWith(ihfKestrel.render());
-      </script>
+    body_custom_code: ""
