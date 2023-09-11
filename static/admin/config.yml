@@ -2,6 +2,7 @@ backend:
   name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
 # These lines should *not* be indented
+logo_url: https://www.hungryram.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fiw93gfn0%2Fproduction%2F3aa582c0745d7d6e109b850f33be704ad184a1fa-400x40.webp&w=640&q=75
 media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 collections:
