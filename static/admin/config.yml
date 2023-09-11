@@ -259,8 +259,10 @@ collections:
                   - {label: "Body", name: "body", widget: "markdown", required: false}
                   - {label: "Form Body", name: "form_body", widget: "markdown", required: false}
                   - {label: "Enable IDX Form", name: "enable_idx_form", widget: "boolean", required: false}
-                  - {label: "Background Color", name: "background_color", widget: "color", required: false}
                   - {label: "Form Background Color", name: "form_background_color", widget: "color", required: false}
+                  - {label: "Background Color", name: "background_color", widget: "color", required: false}
+                  - {label: "Background Image Overlay", name: "background_image_overlay", widget: "color", required: false, enableAlpha: true}
+                  - {label: "Background Image", name: "background_image", widget: "image", required: false}
                   - {label: "Body Color", name: "body_color", widget: "color", required: false}
               - label: "Quick Search"
                 name: "quick_search_idx"
