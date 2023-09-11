@@ -104,6 +104,10 @@ collections:
             name: header_text_color
             widget: color
             required: false
+          - label: Mobile Icon Color
+            name: mobile_icon_color
+            widget: color
+            required: false
           - label: Navigation
             name: nav_items
             widget: list
