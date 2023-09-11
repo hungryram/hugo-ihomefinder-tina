@@ -27,11 +27,68 @@
 {{ partial "page-builder/featured-panel" (dict "sectionData" .) }}
 {{ end }}
 
+{{ if eq "testimonial_section" .type }}
+{{ partial "page-builder/testimonials" (dict "sectionData" .) }}
+<div class="pb-10" style="{{ if .background_color }}background-color:{{ .background_color }}{{ end }};{{ if .background_image }}background-image:url({{ .background_image }}){{ end }}">    
+    <div class="mx-auto container">
+            <div class="swiper-container-testimonial overflow-hidden relative">
+                <div class="swiper-wrapper">
+                    {{ range first 8 (where $.Site.Pages "Type" "testimonials") }}
+                    <div class="swiper-slide bg-white h-full shadow-md">
+                        <svg class="absolute left-4 accent top-2 z-50 h-8 w-8 -translate-x-3 -translate-y-2 transform" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
+                            <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                          </svg>
+                        <div class="flex flex-col py-6 px-10 ">
+                            <figure class="flex flex-auto flex-col justify-between">
+                                <blockquote class="leading-8 text-gray-900">
+                                    {{ .Content }}
+                                </blockquote>
+                                <figcaption class="mt-10 flex items-center gap-x-6">
+                                {{ if .Params.image }}
+                                <img class="h-14 w-14 rounded-full bg-gray-50"
+                                src="{{ .Params.image }}"
+                                alt="{{ .Title }}">
+                                {{ end }}
+                                    <div class="text-base">
+                                        <div class="font-semibold text-gray-900">{{ .Title }}</div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    var swiper = new Swiper('.swiper-container-testimonial', {
+        spaceBetween: 10,      // Adjust as needed
+        breakpoints: {
+            // For screens less than or equal to 640px wide (mobile)
+            640: {
+                slidesPerView: 1,
+            },
+            // For screens greater than 640px wide (tablet and above)
+            768: {
+                slidesPerView: 3,
+            },
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>
+
+{{ end }}
+
 {{ if eq "team_section" .type }}
 {{ partial "page-builder/team-section" (dict "sectionData" .) }}
 <!-- Swiper Container -->
 <div class="large-container mx-auto overflow-hidden mb-20">
-    <div class="swiper-container-team">
+    <div class="swiper-container-team relative">
         <div class="swiper-wrapper max-w-max mx-auto">
             {{ range (where $.Site.RegularPages "Section" "team") }}
             <div class="swiper-slide">
@@ -67,17 +124,11 @@
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-
     });
 </script>
 {{ end }}
 
 {{ if eq "blog_section" .type }}
-
 <div class="section"
     style="{{ if .background_color }}background-color:{{ .background_color }}{{ end }};{{ if .background_image }}background-image:url({{ .background_image }}){{ end }}">
     <div class="container mx-auto">
@@ -110,8 +161,9 @@
 {{ if eq "text_and_form" .type }}
 <div class="section relative bg-cover bg-no-repeat bg-center"
     style="{{ if .background_color }}background-color:{{ .background_color }}{{ end }};{{ if .background_image }}background-image:url({{ .background_image }}){{ end }}">
+    <div class="absolute left-0 right-0 bottom-0 top-0 z-10" style="background-color:{{ .background_image_overlay | safeCSS }}"></div>
     <div>
-        <div class="container mx-auto">
+        <div class="container mx-auto relative z-20">
             <div class="md:flex md:items-center">
                 <div class="md:w-1/2">
                     <div class="content" style="{{ if .body_color }}color:{{ .body_color }}{{ end }}">{{.body |
@@ -119,9 +171,6 @@
                 </div>
                 <div class="md:w-1/2">
                     <div class="text-form">
-                        {{ with .form.heading }}
-                        <h2 class="text-2xl md:text-3xl font-semibold">{{ . }}</h2>
-                        {{ end }}
                         {{ with .form.body }}
                         <div class="md-content mt-4">
                             {{ . | markdownify }}
@@ -131,38 +180,46 @@
                             <div class="content">
                                 {{ .form_body | markdownify }}
                             </div>
-                            <form name="Website Contact Form Widget" method="POST" netlify-honeypot="bot-field"
-                                data-netlify="true" class="grid grid-cols-6 gap-4 mt-10" action="/thank-you">
-                                <input name="bot-field" type="hidden" />
-                                <input type="hidden" name="Subject" value="Website Contact Form Widget">
-                                <input name="Source" type="hidden" value="{{ .Permalink }}" />
-                                <div class="col-span-6">
-                                    <input
-                                        class="w-full py-2 px-3 border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
-                                        type="text" placeholder="Name" name="Name">
-                                </div>
-                                <div class="col-span-3">
-                                    <input
-                                        class="w-full py-2 px-3 border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
-                                        type="text" placeholder="Phone" name="Phone">
-                                </div>
-                                <div class="col-span-3">
-                                    <input
-                                        class="w-full py-2 px-3 border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
-                                        type="text" placeholder="Email" name="Email">
-                                </div>
-                                <div class="col-span-6">
-                                    <textarea
-                                        class="w-full py-2 px-3 border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
-                                        rows="5" placeholder="Your Message" name="Message"></textarea>
-                                </div>
-                                <div class="col-span-2">
-                                    <button class="primary-button formSubmit" type="submit">Send Email</button>
-                                </div>
-                                <div class="col-span-2 content">
-                                    {{ $.Site.Data.appearance.form.form_disclaimer | markdownify }}
-                                </div>
-                            </form>
+                        {{ if .enable_idx_form }}
+                        <script>
+                            document.currentScript.replaceWith(ihfKestrel.render({
+                                "component": "contactFormWidget"
+                            }));
+                        </script>
+                        {{ else }}
+                        <form name="Website Contact Form Widget" method="POST" netlify-honeypot="bot-field"
+                        data-netlify="true" class="grid grid-cols-6 gap-4 mt-10 relative" action="/thank-you">
+                        <input name="bot-field" type="hidden" />
+                        <input type="hidden" name="Subject" value="Website Contact Form Widget">
+                        <input name="Source" type="hidden" value="{{ .Permalink }}" />
+                        <div class="col-span-6">
+                            <input
+                                class="w-full py-2 px-3 border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
+                                type="text" placeholder="Name" name="Name">
+                        </div>
+                        <div class="col-span-3">
+                            <input
+                                class="w-full py-2 px-3 border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
+                                type="text" placeholder="Phone" name="Phone">
+                        </div>
+                        <div class="col-span-3">
+                            <input
+                                class="w-full py-2 px-3 border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
+                                type="text" placeholder="Email" name="Email">
+                        </div>
+                        <div class="col-span-6">
+                            <textarea
+                                class="w-full py-2 px-3 border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
+                                rows="5" placeholder="Your Message" name="Message"></textarea>
+                        </div>
+                        <div class="col-span-2">
+                            <button class="primary-button formSubmit" type="submit">Send Email</button>
+                        </div>
+                        <div class="col-span-2 content">
+                            {{ $.Site.Data.appearance.form.form_disclaimer | markdownify }}
+                        </div>
+                    </form>
+                        {{ end }}
                         </div>
                     </div>
                 </div>
