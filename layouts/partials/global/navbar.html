@@ -25,12 +25,13 @@
       </a>
     </div>
     <div class="flex lg:hidden">
-      <button id="openButton" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400">
+      <button id="openButton" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 !bg-transparent flex-col space-y-1">
         <span class="sr-only">Open main menu</span>
-        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-        </svg>
-      </button>
+        <span class="w-6 h-[2px] bg-black"></span>
+        <span class="w-6 h-[2px] bg-black"></span>
+        <span class="w-6 h-[2px] bg-black"></span>
+    </button>
+    
     </div>
     <div id="menuLinks" class="hidden lg:flex lg:gap-x-12">
       <!-- Hugo Template Logic for Menu -->
@@ -69,7 +70,7 @@
   <div class="flex items-center justify-between p-4">
         <span class="sr-only">{{ $profile.company_name }}</span>
         <img src="{{ $branding.branding_logo }}" alt="{{ $profile.company_name }}" width="{{ if $branding.branding_logo_width }}{{ $branding.branding_logo_width }}{{ else }}100{{ end }}">
-      <button id="closeButton" class="text-gray-400">
+      <button id="closeButton" class="!bg-transparent text-black">
           <span class="sr-only">Close menu</span>
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -104,8 +105,12 @@
               <a href="{{ .path }}" class="text-sm font-semibold leading-6 text-black py-4">{{ .label }}</a>
           </li>
           {{ end }}
+
           {{ end }}
           <!-- End Hugo Template Logic for Mobile Menu -->
+          <li class="mt-10">
+            <a href="{{ .Site.Data.navigation.call_to_action_link }}" class="primary-button !block !text-center">{{ .Site.Data.navigation.call_to_action_text }}</a>
+          </li>
       </ul>
   </nav>
 </div>
@@ -117,17 +122,29 @@
 
   function openMobileMenu() {
       mobileMenu.style.transform = 'translateX(0)';
+      // Add a click event listener to the document to close the menu when clicking outside
+      document.addEventListener('click', closeMobileMenuOnClickOutside);
   }
 
   function closeMobileMenu() {
       mobileMenu.style.transform = 'translateX(-100%)';
+      // Remove the click event listener when closing the menu
+      document.removeEventListener('click', closeMobileMenuOnClickOutside);
   }
-
-  openButton.addEventListener('click', openMobileMenu);
-  closeButton.addEventListener('click', closeMobileMenu);
 
   function toggleDropdown(item) {
       const submenu = item.nextElementSibling;
       submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
   }
+
+  function closeMobileMenuOnClickOutside(event) {
+      // Check if the clicked element is outside the mobile menu
+      if (!mobileMenu.contains(event.target) && event.target !== openButton) {
+          closeMobileMenu();
+      }
+  }
+
+  openButton.addEventListener('click', openMobileMenu);
+  closeButton.addEventListener('click', closeMobileMenu);
+  
 </script>

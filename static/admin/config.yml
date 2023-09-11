@@ -48,8 +48,6 @@ collections:
                   - {label: "TikTok", name: "tiktok", widget: "string", required: false}
                   - {label: "Snapchat", name: "snapchat", widget: "string", required: false}
                   - {label: "WhatsApp", name: "whatsapp", widget: "string", required: false}
-                  - {label: "Zillow", name: "zillow", widget: "string", required: false}
-                  - {label: "Realtor", name: "realtor", widget: "string", required: false}
               - label: "Search Engine Optimization"
                 name: "seo"
                 widget: "object"
