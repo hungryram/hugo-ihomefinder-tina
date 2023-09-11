@@ -1,7 +1,8 @@
 top_header_color: "#000000"
 top_header_text_color: "#9e3737"
-header_color: "#927777"
-header_text_color: "#c6c6c6"
+header_color: "#f1f1f1"
+header_text_color: "#000000"
+mobile_icon_color: "#fefefe"
 nav_items:
   - sub_items: []
     label: Home
