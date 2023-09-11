@@ -99,4 +99,5 @@ home_sections:
     enable_idx_form: true
     form_background_color: "#e5e5e5"
     background_color: "#000000"
+    body_color: "#ffffff"
 ---
