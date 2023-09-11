@@ -65,7 +65,26 @@ collections:
           - {label: "Custom CSS in Head", name: "head_custom_css", widget: "text", required: false}
           - {label: "Custom Code in Body", name: "body_custom_code", widget: "text", required: false}
 
-      - file: data/settings.yml
+  - name: "appearance" # This is the collection name
+    label: "Appearance" # This is the label shown in the CMS
+    files:
+      - name: "data_appearance" # This is the file name without the extension
+        label: "Appearance Configuration" # Label for the file in the CMS
+        file: "data/appearance.yml" # Path to your appearance YAML file
+        fields:
+          - { name: "colors_primary_button_background_color", label: "Primary Button Background Color", widget: "color", required: false }
+          - { name: "colors_primary_button_text_color", label: "Primary Button Text Color", widget: "color", required: false }
+          - { name: "colors_accent", label: "Accent Color", widget: "color", required: false }
+          - { name: "banner_image_overlay", label: "Banner Image Overlay", widget: "color", required: false, enableAlpha: true }
+          - { name: "banner_image", label: "Banner Image", widget: "image", required: false }
+      - name: "data_branding" # This is the file name without the extension
+        label: "Branding" # Label for the file in the CMS
+        file: "data/branding.yml" # Path to your appearance YAML file
+        fields:
+          - { name: "branding_logo", label: "Logo", widget: "image", required: false }
+          - { name: "branding_favicon", label: "Favicon", widget: "image", required: false }
+          - { name: "branding_logo_width", label: "Logo Width", widget: "number", required: false }
+      - file: data/navigation.yml
         label: Navigation
         name: navigation
         fields:
@@ -106,25 +125,6 @@ collections:
             name: call_to_action_link
             widget: string
             required: false
-  - name: "appearance" # This is the collection name
-    label: "Appearance" # This is the label shown in the CMS
-    files:
-      - name: "data_appearance" # This is the file name without the extension
-        label: "Appearance Configuration" # Label for the file in the CMS
-        file: "data/appearance.yml" # Path to your appearance YAML file
-        fields:
-          - { name: "colors_primary_button_background_color", label: "Primary Button Background Color", widget: "color", required: false }
-          - { name: "colors_primary_button_text_color", label: "Primary Button Text Color", widget: "color", required: false }
-          - { name: "colors_accent", label: "Accent Color", widget: "color", required: false }
-          - { name: "banner_image_overlay", label: "Banner Image Overlay", widget: "color", required: false, enableAlpha: true }
-          - { name: "banner_image", label: "Banner Image", widget: "image", required: false }
-      - name: "data_branding" # This is the file name without the extension
-        label: "Branding" # Label for the file in the CMS
-        file: "data/branding.yml" # Path to your appearance YAML file
-        fields:
-          - { name: "branding_logo", label: "Logo", widget: "image", required: false }
-          - { name: "branding_favicon", label: "Favicon", widget: "image", required: false }
-          - { name: "branding_logo_width", label: "Logo Width", widget: "number", required: false }
       - name: "footer" # This is the file name without the extension
         label: "Footer" # Label for the file in the CMS
         file: "data/footer.yml" # Path to your appearance YAML file

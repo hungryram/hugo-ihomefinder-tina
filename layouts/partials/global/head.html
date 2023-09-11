@@ -39,11 +39,10 @@
 {{ partial "global/seo" . }}
 
 <!-- CUSTOM CSS -->
-{{ .Site.Data.profile.custom_code.head_custom_css | safeHTML }}
+{{ .Site.Data.code.head_custom_css | safeHTML }}
 
 <!-- CUSTOM Script -->
-{{ .Site.Data.profile.custom_code.head_custom_script | safeHTML }}
-{{ .Site.Data.profile.social.snapchat | safeHTML }}
+{{ .Site.Data.code.head_custom_script | safeHTML }}
 
 <!-- FONTS -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,16 +52,13 @@
 <!-- STYLESHEETS AND RESOURCES-->
 <link rel="stylesheet" href="/css/globals.css">
 
-<!-- CUSTOM SCRIPT -->
-{{ .Site.Data.developer.custom_script | safeHTML }}
 
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
 />
-
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </head>
 <body>
 
-{{ .Site.Data.profile.custom_code.body_custom_code | safeHTML }}
+{{ .Site.Data.code.body_custom_code | safeHTML }}
