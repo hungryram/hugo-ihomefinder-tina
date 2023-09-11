@@ -174,38 +174,46 @@
                             <div class="content">
                                 {{ .form_body | markdownify }}
                             </div>
-                            <form name="Website Contact Form Widget" method="POST" netlify-honeypot="bot-field"
-                                data-netlify="true" class="grid grid-cols-6 gap-4 mt-10" action="/thank-you">
-                                <input name="bot-field" type="hidden" />
-                                <input type="hidden" name="Subject" value="Website Contact Form Widget">
-                                <input name="Source" type="hidden" value="{{ .Permalink }}" />
-                                <div class="col-span-6">
-                                    <input
-                                        class="w-full py-2 px-3 border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
-                                        type="text" placeholder="Name" name="Name">
-                                </div>
-                                <div class="col-span-3">
-                                    <input
-                                        class="w-full py-2 px-3 border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
-                                        type="text" placeholder="Phone" name="Phone">
-                                </div>
-                                <div class="col-span-3">
-                                    <input
-                                        class="w-full py-2 px-3 border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
-                                        type="text" placeholder="Email" name="Email">
-                                </div>
-                                <div class="col-span-6">
-                                    <textarea
-                                        class="w-full py-2 px-3 border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
-                                        rows="5" placeholder="Your Message" name="Message"></textarea>
-                                </div>
-                                <div class="col-span-2">
-                                    <button class="primary-button formSubmit" type="submit">Send Email</button>
-                                </div>
-                                <div class="col-span-2 content">
-                                    {{ $.Site.Data.appearance.form.form_disclaimer | markdownify }}
-                                </div>
-                            </form>
+                        {{ if .enable_idx_form }}
+                        <script>
+                            document.currentScript.replaceWith(ihfKestrel.render({
+                                "component": "contactFormWidget"
+                            }));
+                        </script>
+                        {{ else }}
+                        <form name="Website Contact Form Widget" method="POST" netlify-honeypot="bot-field"
+                        data-netlify="true" class="grid grid-cols-6 gap-4 mt-10" action="/thank-you">
+                        <input name="bot-field" type="hidden" />
+                        <input type="hidden" name="Subject" value="Website Contact Form Widget">
+                        <input name="Source" type="hidden" value="{{ .Permalink }}" />
+                        <div class="col-span-6">
+                            <input
+                                class="w-full py-2 px-3 border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
+                                type="text" placeholder="Name" name="Name">
+                        </div>
+                        <div class="col-span-3">
+                            <input
+                                class="w-full py-2 px-3 border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
+                                type="text" placeholder="Phone" name="Phone">
+                        </div>
+                        <div class="col-span-3">
+                            <input
+                                class="w-full py-2 px-3 border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
+                                type="text" placeholder="Email" name="Email">
+                        </div>
+                        <div class="col-span-6">
+                            <textarea
+                                class="w-full py-2 px-3 border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
+                                rows="5" placeholder="Your Message" name="Message"></textarea>
+                        </div>
+                        <div class="col-span-2">
+                            <button class="primary-button formSubmit" type="submit">Send Email</button>
+                        </div>
+                        <div class="col-span-2 content">
+                            {{ $.Site.Data.appearance.form.form_disclaimer | markdownify }}
+                        </div>
+                    </form>
+                        {{ end }}
                         </div>
                     </div>
                 </div>
