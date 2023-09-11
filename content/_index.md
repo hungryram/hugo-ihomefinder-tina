@@ -100,4 +100,6 @@ home_sections:
     form_background_color: "#e5e5e5"
     background_color: "#000000"
     body_color: "#ffffff"
+    background_image: /images/uploads/2-wyndam-selects-1-.jpg
+    background_image_overlay: rgba(0, 0, 0, 0.79)
 ---
