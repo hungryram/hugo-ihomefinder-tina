@@ -94,4 +94,9 @@ home_sections:
       View all our reviews
     background_color: "#cd7373"
     body_color: "#cbc6c6"
+  - type: text_and_form
+    body: "## This is my form"
+    enable_idx_form: true
+    form_background_color: "#e5e5e5"
+    background_color: "#000000"
 ---
