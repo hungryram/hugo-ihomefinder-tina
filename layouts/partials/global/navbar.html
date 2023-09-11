@@ -34,7 +34,7 @@
     </div>
     <div id="menuLinks" class="hidden lg:flex lg:gap-x-12">
       <!-- Hugo Template Logic for Menu -->
-      {{ range $.Site.Data.settings.nav_items }}
+      {{ range $.Site.Data.navigation.nav_items }}
       {{ if .sub_items }}
         <div class="relative group has-dropdown ml-4"> <!-- Added ml-4 for spacing -->
           <a href="#" class="text-sm font-semibold leading-6 text-white group flex items-center py-4">
@@ -60,7 +60,7 @@
     </div>
     
     <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-      <a href="{{ .Site.Data.settings.call_to_action_link }}" class="primary-button">{{ .Site.Data.settings.call_to_action_text }}</a>
+      <a href="{{ .Site.Data.navigation.call_to_action_link }}" class="primary-button">{{ .Site.Data.navigation.call_to_action_text }}</a>
     </div>
   </nav>
 
@@ -79,7 +79,7 @@
   <nav class="p-4">
       <ul>
           <!-- Hugo Template Logic for Mobile Menu -->
-          {{ range $.Site.Data.settings.nav_items }}
+          {{ range $.Site.Data.navigation.nav_items }}
           {{ if .sub_items }}
           <li class="relative group"> <!-- Added ml-4 for spacing -->
               <a href="#" class="text-sm font-semibold leading-6 group flex items-center py-4" onclick="toggleDropdown(this)">

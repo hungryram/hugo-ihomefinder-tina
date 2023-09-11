@@ -2,24 +2,3 @@ top_header_color: "#d50505"
 top_header_text_color: "#ffffff"
 header_color: "#000000"
 header_text_color: "#fdfdfd"
-nav_items:
-  - sub_items: []
-    label: Home
-    path: /
-  - label: Resources
-    sub_items:
-      - label: Blog
-        path: /blog
-      - label: Team
-        path: /team
-      - label: Legal
-        path: /legal
-    path: /
-  - label: Contact
-    path: /contact
-  - label: Sitemap
-    path: /sitemap
-  - label: Office
-    path: /office
-call_to_action_text: Search Homes
-call_to_action_link: /search
