@@ -1,0 +1,9 @@
+head_custom_script: |-
+  <script src="https://kestrel.idxhome.com/ihf-kestrel.js"></script>
+  <script>
+  	window.ihfKestrel = window.ihfKestrel || {};
+  	ihfKestrel.config = {
+  		platform: "custom",
+  		activationToken: "74FF8CF7-155D-6042-0C4804457FA68958",
+  	};
+  </script>
