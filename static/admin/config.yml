@@ -69,6 +69,8 @@ collections:
 
   - name: "appearance" # This is the collection name
     label: "Appearance" # This is the label shown in the CMS
+    editor:
+      preview: false
     files:
       - name: "data_appearance" # This is the file name without the extension
         label: "Appearance Configuration" # Label for the file in the CMS
@@ -89,6 +91,8 @@ collections:
       - file: data/navigation.yml
         label: Navigation
         name: navigation
+        editor:
+          preview: false
         fields:
           - label: Top Header Color
             name: top_header_color
@@ -134,6 +138,8 @@ collections:
       - name: "footer" # This is the file name without the extension
         label: "Footer" # Label for the file in the CMS
         file: "data/footer.yml" # Path to your appearance YAML file
+        editor:
+          preview: false
         fields:
           - { name: "footer_logo", label: "Footer Logo", widget: "image", required: false }
           - { name: "logo_width", label: "Footer Logo Width", widget: "number", required: false }
@@ -155,6 +161,8 @@ collections:
               - { label: Path, name: path, widget: string, required: false }
   - name: "home"
     label: "Home Page"
+    editor:
+      preview: false
     files:
       - name: "index"
         label: "Home Page"
@@ -337,6 +345,8 @@ collections:
 # CONTENT PAGES
   - name: "pages"
     label: "Pages" # Used in the UI
+    editor:
+      preview: false
     folder: "/content/" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
@@ -524,6 +534,8 @@ collections:
 # BLOG
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
+    editor:
+      preview: false
     preview_path: blog/{{slug}}
     folder: "/content/blog" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
@@ -539,6 +551,8 @@ collections:
 
 # LEGAL
   - name: "legal" # Used in routes, e.g., /admin/collections/blog
+    editor:
+      preview: false
     label: "Legal" # Used in the UI
     folder: "/content/legal" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
@@ -551,6 +565,8 @@ collections:
 # TEAM
   - name: "team"
     label: "Team" 
+    editor:
+      preview: false
     folder: "/content/team"
     create: true
     slug: "{{title}}" 
@@ -579,6 +595,8 @@ collections:
 # OFFICE
   - name: "office"
     label: "Office" 
+    editor:
+      preview: false
     folder: "/content/office"
     create: true
     slug: "{{title}}" 
@@ -607,6 +625,8 @@ collections:
 # TESTIMONIALS
   - name: "Testimonials" # Used in routes, e.g., /admin/collections/blog
     label: "testimonials" # Used in the UI
+    editor:
+      preview: false
     folder: "/content/testimonials" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g.,
