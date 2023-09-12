@@ -5,6 +5,7 @@ backend:
 logo_url: https://www.hungryram.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fiw93gfn0%2Fproduction%2F3aa582c0745d7d6e109b850f33be704ad184a1fa-400x40.webp&w=640&q=75
 media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+local_backend: true
 collections:
   - name: settings
     label: Settings
@@ -521,9 +522,10 @@ collections:
 # BLOG
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
+    preview_path: blog/{{slug}}
     folder: "/content/blog" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Title", name: "title", widget: "string"}
