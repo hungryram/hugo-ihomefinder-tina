@@ -9,6 +9,8 @@ local_backend: true
 collections:
   - name: settings
     label: Settings
+    editor:
+      preview: false
     files:
       - name: "data_profile" # This is the file name without the extension
         label: "Profile" # Label for the file in the CMS
