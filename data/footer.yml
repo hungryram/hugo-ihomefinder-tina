@@ -1,8 +1,8 @@
 footer_logo: /images/uploads/re-logo.png
 logo_width: 200
 footer_background: ""
-footer_overlay: rgba(0, 0, 0, 0.72)
-footer_background_color: "#2d2d2d"
+footer_overlay: ""
+footer_background_color: "#1e1e1e"
 footer_heading_color: "#fff"
 footer_text_color: "#fff"
 about: "BRe #234234234"
