@@ -19,9 +19,11 @@
             </script>
           </div>
           {{ end }}
+          {{ if index .sectionData "button_link" }}
           <div class="mt-10 flex items-center justify-center gap-x-6">
-            <a href="{{ index .sectionData "button_link" }}" class="primary-button">Get started</a>
+            <a href="{{ index .sectionData "button_link" }}" class="primary-button">{{ index .sectionData "button" }}</a>
           </div>
+          {{ end }}
         </div>
       </div>
     </div>
