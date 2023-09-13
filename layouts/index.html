@@ -76,9 +76,24 @@
 {{ end }}
 
 {{ if eq "team_section" .type }}
-{{ partial "page-builder/team-section" (dict "sectionData" .) }}
+
+<div class="section" style="{{ if .background_color }}background-color:{{ .background_color }}{{ end }};{{ if .background_image }}background-image:url({{ .background_image }}){{ end }}">
+    <div class="container mx-auto">
+        <div class="md:flex items-center gap-10 md:space-y-0 space-y-10 {{ if index .sectionData " image" }}{{ else }}justify-center text-center{{ end }} {{ if .reverse_column }} flex-row-reverse {{ end }}">
+            <div class="{{ if index .sectionData " image" }}md:w-1.2{{ else }}md:w-3/5{{ end }}">
+                <div class="content" style="{{ if .body_text_color }}color:{{ .body_text_color }}{{ end }}">{{ .body | markdownify }}</div>
+                {{ if index .sectionData "button" }}
+                <div class="mt-10 flex items-center gap-x-6 {{ if index .sectionData " image" }}{{ else }}justify-center
+                    text-center{{ end }}">
+                    <a href="{{ index .sectionData " button_link" }}" class="primary-button">{{ index .sectionData "button" }}</a>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+
 <!-- Swiper Container -->
-<div class="large-container mx-auto overflow-hidden mb-20">
+<div class="large-container mx-auto overflow-hidden mb-20 mt-10">
     <div class="swiper-container-team relative">
         <div class="swiper-wrapper max-w-max mx-auto">
             {{ range (where $.Site.RegularPages "Section" "team") }}
@@ -97,6 +112,8 @@
         <div class="swiper-button-next"></div>
     </div>
 </div>
+</div>
+
 <!-- Swiper Initialization Script -->
 <script>
     var swiper = new Swiper('.swiper-container-team', {
@@ -120,8 +137,7 @@
 {{ end }}
 
 {{ if eq "blog_section" .type }}
-<div class="section"
-    style="{{ if .background_color }}background-color:{{ .background_color }}{{ end }};{{ if .background_image }}background-image:url({{ .background_image }}){{ end }}">
+<div class="section" style="{{ if .background_color }}background-color:{{ .background_color }}{{ end }};{{ if .background_image }}background-image:url({{ .background_image }}){{ end }}">
     <div class="container mx-auto">
         <div class="content" style="{{ if .body_color }}color:{{ .body_color }}{{ end }}">{{.body | markdownify }}</div>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
@@ -235,7 +251,7 @@
                 "propertyType": "SFR",
                 "status": "active",
                 "sort": "pd",
-                "resultsPerPage": 6
+                "resultsPerPage": 8
             }));
         </script>
     </div>

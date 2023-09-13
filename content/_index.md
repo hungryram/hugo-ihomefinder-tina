@@ -31,6 +31,6 @@ home_sections:
       ## Our Team
 
       This is the team section
-    background_color: "#343434"
+    background_color: "#F7F8F9"
     body_color: "#ffffff"
 ---
