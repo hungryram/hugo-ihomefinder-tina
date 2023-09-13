@@ -37,6 +37,7 @@ home_sections:
         image: /images/uploads/la.jpg
       - body: "### Orange County"
       - body: "### Inland Empire"
+    background_color: "#f8f8f8"
   - type: team_section
     body: |-
       ## Our Team
