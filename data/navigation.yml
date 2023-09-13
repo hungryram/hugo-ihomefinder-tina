@@ -1,6 +1,6 @@
-top_header_color: "#000000"
-top_header_text_color: "#9e3737"
-header_color: "#f1f1f1"
+top_header_color: "#070811"
+top_header_text_color: "#e6e6e6"
+header_color: "#ffffff"
 header_text_color: "#000000"
 mobile_icon_color: "#000"
 nav_items:
@@ -18,8 +18,6 @@ nav_items:
     path: /
   - label: Contact
     path: /contact
-  - label: Sitemap
-    path: /sitemap
   - label: Office
     path: /office
 call_to_action_text: Search Homes
