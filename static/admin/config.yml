@@ -573,6 +573,7 @@ collections:
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "team"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Position", name: "position", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
       - label: "Address"
