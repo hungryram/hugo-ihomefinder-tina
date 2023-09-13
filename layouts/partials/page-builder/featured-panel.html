@@ -76,14 +76,18 @@
         <div class="mx-auto mt-16 sm:mt-20 lg:mt-24">
             <div class="grid grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-{{ with index .sectionData "column_number" }}{{ . }}{{ else }}3{{ end }}">
             {{ range index .sectionData "featured_blocks" }}
-            <div class="relative isolate flex justify-center items-center text-center h-full overflow-hidden px-8 py-40 sm:py-48 lg:py-52">
+            <div class="relative isolate flex justify-center items-center text-center h-full overflow-hidden px-8 py-40 sm:py-48 lg:py-32 rounded-sm">
                 <a href="{{ .button_link }}">
                 {{ with .image }}
                 <img src="{{ . }}" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover">
+                <div class="absolute top-0 bottom-0 left-0 right-0 bg-gray-900 opacity-50 group-hover:opacity-50 transition-opacity"></div>
                 {{ end }}
-                <div class="content">{{ .body | markdownify }}</div>
-                <div class="absolute left-0 right-0 bottom-0 top-0" style="{{with index .sectionData "background_overlay"}}background-color:{{ . }}{{ end }}"></div>
-            </a>
+                {{ with .body }}
+                <div class="mx-auto max-w-2xl content flex items-center h-full md:px-4 px-16 text-white relative z-10 text-center">
+                  {{ . | markdownify }}
+                </div>
+                {{ end }}
+                </a>
               </div>
             {{ end }}
             </div>

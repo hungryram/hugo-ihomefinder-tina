@@ -65,6 +65,7 @@ button {
     padding-left: 25px;
     padding-right: 25px;
     display: inline-block;
+    border-radius: 4px;
 }
 
 .accent {

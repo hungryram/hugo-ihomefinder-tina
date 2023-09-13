@@ -81,7 +81,7 @@
     <div class="container mx-auto">
         <div class="md:flex items-center gap-10 md:space-y-0 space-y-10 {{ if index .sectionData " image" }}{{ else }}justify-center text-center{{ end }} {{ if .reverse_column }} flex-row-reverse {{ end }}">
             <div class="{{ if index .sectionData " image" }}md:w-1.2{{ else }}md:w-3/5{{ end }}">
-                <div class="content" style="{{ if .body_text_color }}color:{{ .body_text_color }}{{ end }}">{{ .body | markdownify }}</div>
+                <div class="content" style="{{ if .body_color }}color:{{ .body_color }}{{ end }}">{{ .body | markdownify }}</div>
                 {{ if index .sectionData "button" }}
                 <div class="mt-10 flex items-center gap-x-6 {{ if index .sectionData " image" }}{{ else }}justify-center
                     text-center{{ end }}">
@@ -110,6 +110,9 @@
         <!-- Add Navigation Buttons -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
+    </div>
+    <div class="mt-10 text-center">
+        <a href="/team" class="primary-button">View All</a>
     </div>
 </div>
 </div>

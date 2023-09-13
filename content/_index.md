@@ -30,7 +30,7 @@ home_sections:
   - type: featured_listings_idx
     body: "## Featured Listings"
   - type: featured_Panel
-    body: "### Featured Communities"
+    body: "## Featured Communities"
     column_number: 3
     featured_blocks:
       - body: "### Los Angeles"
@@ -43,6 +43,6 @@ home_sections:
       ## Our Team
 
       This is the team section
-    background_color: "#F7F8F9"
-    body_color: "#ffffff"
+    background_color: "#ffffff"
+    body_color: "#000000"
 ---
