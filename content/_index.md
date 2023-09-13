@@ -24,6 +24,8 @@ home_sections:
     reverse_column: true
     type: text-and-image
     image: /images/uploads/wood-interior.jpg
+  - type: featured_listings_idx
+    body: "## Featured Listings"
   - type: team_section
     body: |-
       ## Our Team
