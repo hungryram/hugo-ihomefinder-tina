@@ -89,9 +89,55 @@ body .content h6 {
   }
   
 
-.content h2 {
-    font-size: 2rem;
-}
+/* For h1 elements inside .content */
+.content h1 {
+    font-size: 3rem; /* Equivalent to md:text-7xl text-6xl */
+  }
+  
+  /* For h2 elements inside .content */
+  .content h2 {
+    font-size: 2rem; /* Equivalent to md:text-5xl text-4xl */
+  }
+  
+  /* For h3 elements inside .content */
+  .content h3 {
+    font-size: 1.5rem; /* Equivalent to md:text-2xl text-lg */
+  }
+  
+  /* For h4 elements inside .content */
+  .content h4 {
+    font-size: 1.125rem; /* Equivalent to text-lg */
+  }
+  
+  /* For the second and subsequent paragraphs inside .content */
+  .content p + p {
+    margin-top: 1.5rem; /* Equivalent to mt-6 */
+  }
+  
+  /* For all paragraphs inside .content */
+  .content p {
+    line-height: 1.75; /* Equivalent to leading-7 */
+  }
+  
+  /* For unordered lists inside .content */
+  .content ul {
+    margin-top: 0.5rem; /* Equivalent to my-2 */
+    list-style-type: disc; /* Equivalent to list-disc */
+    margin-left: 2rem; /* Equivalent to ml-8 */
+  }
+  
+  /* For ordered lists inside .content */
+  .content ol {
+    margin-top: 0.5rem; /* Equivalent to my-2 */
+    list-style-type: decimal; /* Equivalent to list-decimal */
+    margin-left: 2rem; /* Equivalent to ml-8 */
+  }
+  
+  /* For list items inside .content */
+  .content li {
+    margin-top: 0.25rem; /* Equivalent to my-1 */
+  }
+  
 
 body a:hover {
     text-decoration: none;

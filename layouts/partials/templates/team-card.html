@@ -1,12 +1,14 @@
 <div>
     <a href="{{ .Permalink }}">
         {{ if .image }}
-        <div>
-            <img class="w-full object-cover" src="{{ .image }}" alt="{{ .title }}">
+        <div class="h-96 bg-slate-500">
+            <img class="w-full object-cover h-full" src="{{ .image }}" alt="{{ .title }}">
         </div>
         {{ end }}
-        <h3 class="mt-6 text-lg font-semibold leading-8 tracking-tight">{{ .title }}</h3>
-        <p class="text-base leading-7 text-gray-300">{{ .position }}</p>
-        <a href="{{ .Permalink }}" class="accent font-semibold">View Profile</a>
+        <div>
+            <h3 class="mt-6 text-lg font-semibold leading-8 tracking-tight">{{ .title }}</h3>
+            <p class="text-base leading-7 text-gray-300">{{ .position }}</p>
+            <a href="{{ .Permalink }}" class="accent font-normal">View Profile</a>
+        </div>
     </a>
 </div>
