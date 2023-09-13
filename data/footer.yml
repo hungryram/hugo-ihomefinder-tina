@@ -1,8 +1,8 @@
-footer_logo: https://www.1stindependencerealty.com/uploads/1st-independence.png
+footer_logo: /images/uploads/re-logo.png
 logo_width: 200
-footer_background: /images/uploads/2-wyndam-selects-1-.jpg
+footer_background: ""
 footer_overlay: rgba(0, 0, 0, 0.72)
-footer_background_color: "#966969"
+footer_background_color: "#2d2d2d"
 footer_heading_color: "#fff"
 footer_text_color: "#fff"
 about: "BRe #234234234"
@@ -23,3 +23,5 @@ nav_items:
     path: /about
   - label: Contact
     path: /contact
+  - label: Search
+    path: /search
