@@ -27,6 +27,10 @@
 {{ partial "page-builder/featured-panel" (dict "sectionData" .) }}
 {{ end }}
 
+{{ if eq "contact_page" .type }}
+{{ partial "page-builder/contact-page" (dict "sectionData" .) }}
+{{ end }}
+
 {{ if eq "testimonial_section" .type }}
 {{ partial "page-builder/testimonials" (dict "sectionData" .) }}
 <div class="pb-10" style="{{ if .background_color }}background-color:{{ .background_color }}{{ end }};{{ if .background_image }}background-image:url({{ .background_image }}){{ end }}">    
