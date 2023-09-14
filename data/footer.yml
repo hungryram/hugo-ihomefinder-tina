@@ -3,8 +3,8 @@ logo_width: 100
 footer_background: /images/uploads/clean-living-room_b3bubn.jpg
 footer_overlay: rgba(0, 0, 0, 0.88)
 footer_background_color: "#1e1e1e"
-footer_heading_color: "#fff"
-footer_text_color: "#fff"
+footer_heading_color: ""
+footer_text_color: ""
 about: "BRe #234234234"
 disclaimer: The content and data provided on this website are intended for
   informational purposes only. While we make every effort to ensure its accuracy
