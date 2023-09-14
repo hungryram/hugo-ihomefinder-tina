@@ -36,7 +36,9 @@ home_sections:
       - body: "### Los Angeles"
         image: /images/uploads/la.jpg
       - body: "### Orange County"
+        image: /images/uploads/oc.jpg
       - body: "### Inland Empire"
+        image: /images/uploads/pexels-soly-moses-14636840.jpg
     background_color: "#f8f8f8"
   - type: team_section
     body: |-
