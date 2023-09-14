@@ -2,7 +2,7 @@ footer_logo: /images/uploads/re-logo.png
 logo_width: 100
 footer_background: /images/uploads/clean-living-room_b3bubn.jpg
 footer_overlay: rgba(0, 0, 0, 0.88)
-footer_background_color: "#1e1e1e"
+footer_background_color: ""
 footer_heading_color: ""
 footer_text_color: ""
 about: "BRe #234234234"
