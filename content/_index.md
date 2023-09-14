@@ -28,7 +28,11 @@ home_sections:
     type: text-and-image
     image: /images/uploads/ali-morshedlou-wmd64tmfc4k-unsplash.jpg
   - type: featured_listings_idx
-    body: "## Featured Listings"
+    body: >-
+      ## Featured Listings
+
+
+      Connect your MLS board to your website to automatically pull in featured listings.
   - type: featured_Panel
     body: "## Featured Communities"
     column_number: 3
