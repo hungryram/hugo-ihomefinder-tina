@@ -10,7 +10,7 @@ nav_items:
   - label: Buyers
     sub_items:
       - label: Listings
-        path: /listing
+        path: /featured-listings
       - label: Search
         path: /search
     path: /
