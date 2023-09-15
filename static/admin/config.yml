@@ -358,6 +358,8 @@ collections:
         name: "hide_banner"
         widget: "boolean"
         required: false
+      - { name: "banner_image_overlay", label: "Banner Image Overlay", widget: "color", required: false, enableAlpha: true }
+      - { name: "banner_image", label: "Banner Image", widget: "image", required: false }
       - label: "Page Builder"
         name: "page_builder"
         widget: "list"
@@ -550,12 +552,14 @@ collections:
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - { name: "banner_image_overlay", label: "Banner Image Overlay", widget: "color", required: false, enableAlpha: true }
+      - { name: "banner_image", label: "Banner Image", widget: "image", required: false }
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
       - {label: "Image Alt Tag", name: "alt_tag", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Is Post", name: "is_post", widget: "boolean", default: true, required: false}
+      - {label: "Is Post", name: "is_post", widget: "hidden", default: true, required: false}
 
 # LEGAL
   - name: "legal" # Used in routes, e.g., /admin/collections/blog
@@ -611,6 +615,8 @@ collections:
     slug: "{{title}}" 
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "office"}
+      - { name: "banner_image_overlay", label: "Banner Image Overlay", widget: "color", required: false, enableAlpha: true }
+      - { name: "banner_image", label: "Banner Image", widget: "image", required: false }
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}

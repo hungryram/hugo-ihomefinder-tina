@@ -1,6 +1,6 @@
 ---
 title: Contact
-hide_banner: true
+hide_banner: false
 page_builder:
   - type: contact_page
     body: |-
@@ -8,6 +8,6 @@ page_builder:
 
       Get in touch by filling out the form
     idx_form: true
-    background_color: "#cccccc"
+    background_color: ""
     body_color: "#000000"
 ---

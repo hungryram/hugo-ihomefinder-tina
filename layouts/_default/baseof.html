@@ -2,8 +2,8 @@
 {{ partial "global/navbar" . }}
 <div id="page-banner">
     <div class="relative isolate overflow-hidden">
-      <img src="{{ .Site.Data.appearance.banner_image }}" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover">
-      <div class="absolute left-0 right-0 top-0 bottom-0 z-10" style="background-color:{{ .Site.Data.appearance.banner_image_overlay | safeCSS }}"></div>
+      <img src="{{ if .Params.banner_image }}{{ .Params.banner_image }}{{ else }}{{ .Site.Data.appearance.banner_image }}{{ end }}" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover">
+      <div class="absolute left-0 right-0 top-0 bottom-0 z-10" style="background-color:{{ if .Params.banner_image_overlay }}{{ .Params.banner_image_overlay | safeCSS }}{{ else }}{{ .Site.Data.appearance.banner_image_overlay | safeCSS }}{{ end }}"></div>
       <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-40 relative z-20">
         <div class="text-center">
           <h1 class="text-4xl text-white md:text-5xl">{{ .Params.Title }}</h1>

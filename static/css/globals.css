@@ -236,7 +236,8 @@ footer * {
 
 /* COPY AND PASTE INTO IHOMEFINDER CSS */
 
-a.ui-button-contained-primary {
+a.ui-button-contained-primary,
+button.ui-button-contained-primary {
     background-color: var(--primary-button-background)!important;
     color: var(--primary-button-text-color);
 }

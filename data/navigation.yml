@@ -7,18 +7,26 @@ nav_items:
   - sub_items: []
     label: Home
     path: /
+  - label: Buyers
+    sub_items:
+      - label: Listings
+        path: /listing
+      - label: Search
+        path: /search
+    path: /
   - label: Resources
     sub_items:
+      - label: Testimonials
+        path: /testimonials
       - label: Blog
         path: /blog
+      - label: Offices
+        path: /offices
       - label: Team
         path: /team
-      - label: Legal
-        path: /legal
-    path: /
   - label: Contact
     path: /contact
   - label: Office
     path: /office
-call_to_action_text: Search Homes
-call_to_action_link: /search
+call_to_action_text: My Account
+call_to_action_link: /property-organizer

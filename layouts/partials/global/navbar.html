@@ -66,7 +66,7 @@
   </nav>
 
 <!-- Mobile Menu -->
-<div id="mobileMenu" class="fixed z-50 inset-y-0 left-0 w-72 bg-white transform -translate-x-full transition-transform duration-300 ease-in-out">
+<div id="mobileMenu" class="fixed z-[200] inset-y-0 left-0 w-72 bg-white transform -translate-x-full transition-transform duration-300 ease-in-out">
   <div class="flex items-center justify-between p-4">
         <span class="sr-only">{{ $profile.company_name }}</span>
         <img src="{{ $branding.branding_logo }}" alt="{{ $profile.company_name }}" width="{{ if $branding.branding_logo_width }}{{ $branding.branding_logo_width }}{{ else }}100{{ end }}">
