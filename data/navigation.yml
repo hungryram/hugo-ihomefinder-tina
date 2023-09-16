@@ -1,7 +1,7 @@
 top_header_color: "#070811"
 top_header_text_color: "#e6e6e6"
-header_color: ""
-header_text_color: "#fff"
+header_color: "#fff"
+header_text_color: "#000"
 mobile_icon_color: "#000"
 nav_items:
   - sub_items: []
