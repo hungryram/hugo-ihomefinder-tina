@@ -40,13 +40,13 @@ home_sections:
     featured_blocks:
       - body: "### Los Angeles"
         image: /images/uploads/la.jpg
-        button_link: https://not-nextjs-framework.netlify.app/idx?path=/listing-report&id=2641109
+        button_link: /idx?path=/listing-report&id=2641109
       - body: "### Orange County"
         image: /images/uploads/oc.jpg
-        button_link: https://not-nextjs-framework.netlify.app/idx/?path=/listing-report&id=2641110
+        button_link: /idx/?path=/listing-report&id=2641110
       - body: "### Inland Empire"
         image: /images/uploads/pexels-soly-moses-14636840.jpg
-        button_link: https://not-nextjs-framework.netlify.app/idx/?path=/listing-report&id=2641111
+        button_link: /idx/?path=/listing-report&id=2641111
     background_color: "#f8f8f8"
   - type: team_section
     body: |-
