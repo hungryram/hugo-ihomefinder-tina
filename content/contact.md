@@ -10,6 +10,6 @@ page_builder:
     idx_form: true
     background_color: ""
     body_color: "#000000"
-title_tag: Contact Us
+title_tag: 
 meta_description: test
 ---
