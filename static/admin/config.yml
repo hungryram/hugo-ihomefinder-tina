@@ -556,8 +556,8 @@ collections:
                 name: "body_text_color"
                 widget: "color"
                 required: false
-        - {label: "Title Tag", name: "title_tag", widget: "string"}
-        - {label: "Meta Description", name: "meta_description", widget: "text"}
+      - {label: "Title Tag", name: "title_tag", widget: "string"}
+      - {label: "Meta Description", name: "meta_description", widget: "text"}
 
 # BLOG
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
