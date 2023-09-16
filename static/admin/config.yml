@@ -556,6 +556,8 @@ collections:
                 name: "body_text_color"
                 widget: "color"
                 required: false
+        - {label: "Title Tag", name: "title_tag", widget: "string"}
+        - {label: "Meta Description", name: "meta_description", widget: "text"}
 
 # BLOG
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
@@ -591,6 +593,8 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Update Date", name: "last_update", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Title Tag", name: "title_tag", widget: "string"}
+      - {label: "Meta Description", name: "meta_description", widget: "text"}
 
 # TEAM
   - name: "team"
@@ -622,6 +626,8 @@ collections:
           - {label: "Direct Number", name: "direct", widget: "string", required: false}
           - {label: "Office Number", name: "office", widget: "string", required: false}
           - {label: "email", name: "email", widget: "string", required: false}
+      - {label: "Title Tag", name: "title_tag", widget: "string"}
+      - {label: "Meta Description", name: "meta_description", widget: "text"}
 
 # OFFICE
   - name: "office"
@@ -654,6 +660,8 @@ collections:
           - {label: "Direct Number", name: "direct", widget: "string", required: false}
           - {label: "Office Number", name: "office", widget: "string", required: false}
           - {label: "email", name: "email", widget: "string", required: false}
+      - {label: "Title Tag", name: "title_tag", widget: "string"}
+      - {label: "Meta Description", name: "meta_description", widget: "text"}
 
 # TESTIMONIALS
   - name: "Testimonials" # Used in routes, e.g., /admin/collections/blog
