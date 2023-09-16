@@ -1,6 +1,11 @@
 <div class="section" style="{{ if index .sectionData "background_color" }}background-color:{{ index .sectionData "background_color" }}{{ end }};{{ if index .sectionData "background_image" }}background-image:url({{ index .sectionData "background_image" }}){{ end }}">
     <div class="container mx-auto">
       <div class="md:flex items-center gap-10 md:space-y-0 space-y-10 {{ if index .sectionData "image" }}{{ else }}justify-center text-center{{ end }} {{ if index .sectionData "reverse_column" }} flex-row-reverse {{ end }}">
+        {{ if index .sectionData "image"}}
+        <div class="md:w-3/5">
+          <img src="{{ index .sectionData "image" }}" alt="{{ index .sectionData "imageAlt" }}">
+        </div>
+        {{ end }}
         <div class="{{ if index .sectionData "image" }}md:w-w-2/5{{ else }}md:w-3/5{{ end }}">
           <div class="content" style="{{ if index .sectionData "body_text_color" }}color:{{ index .sectionData "body_text_color" }}{{ end }}">{{ index .sectionData "body" | markdownify }}</div>
           {{ if index .sectionData "button" }}
@@ -9,11 +14,6 @@
             </div>
           {{ end }}
         </div>
-        {{ if index .sectionData "image"}}
-        <div class="md:w-3/5">
-          <img src="{{ index .sectionData "image" }}" alt="{{ index .sectionData "imageAlt" }}">
-        </div>
-        {{ end }}
       </div>
     </div>
   </div>

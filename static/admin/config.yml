@@ -181,6 +181,14 @@ collections:
                     name: "enable_quick_search"
                     widget: "boolean"
                     required: false
+                  - label: "Enable Universal Quick Search"
+                    name: "universal_quick_search"
+                    widget: "boolean"
+                    required: false
+                  - label: "Enable Full Screen Image"
+                    name: "full_screen"
+                    widget: "boolean"
+                    required: false
                   - label: "Heading"
                     name: "heading"
                     widget: "string"
@@ -371,6 +379,14 @@ collections:
             fields:
               - label: "Enable IDX Quick Search"
                 name: "enable_quick_search"
+                widget: "boolean"
+                required: false
+              - label: "Enable Universal Quick Search"
+                name: "universal_quick_search"
+                widget: "boolean"
+                required: false
+              - label: "Enable Full Screen Image"
+                name: "full_screen"
                 widget: "boolean"
                 required: false
               - label: "Heading"

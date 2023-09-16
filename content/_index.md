@@ -1,6 +1,7 @@
 ---
 home_sections:
   - headingColor: "#eeeeee"
+    full_screen: false
     bodyColor: "#ffffff"
     body: "# Modern Luxury Home"
     heading: ""
@@ -24,7 +25,7 @@ home_sections:
     body_text_color: "#101010"
     background_color: "#f8f8f8"
     button: Search Homes
-    reverse_column: true
+    reverse_column: false
     type: text-and-image
     image: /images/uploads/ali-morshedlou-wmd64tmfc4k-unsplash.jpg
   - type: featured_listings_idx
