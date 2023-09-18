@@ -34,6 +34,15 @@ home_sections:
 
 
       Connect your MLS board to your website to automatically pull in featured listings.
+  - type: text_and_form
+    body: "## Text and Image"
+    form_body: >-
+      ### Send us a message
+
+
+      Please fill out the form below and we'll reach out to you as soon as possible!
+    background_image: /images/uploads/la.jpg
+    background_image_overlay: rgba(0, 0, 0, 0.88)
   - type: featured_Panel
     body: "## Featured Communities"
     column_number: 3
@@ -55,11 +64,4 @@ home_sections:
       This is the team section
     background_color: "#ffffff"
     body_color: "#000000"
-  - type: text_and_form
-    body: "## Text and Image"
-    form_body: >-
-      ### Send us a message
-
-
-      Please fill out the form below and we'll reach out to you as soon as possible!
 ---
