@@ -38,9 +38,14 @@ home_sections:
       ## Featured Listings
 
 
-      Connect your MLS board to your website to automatically pull in featured listings.
+      Connect your MLS board to your website to automatically pull in featured listings from your office.
   - type: text_and_form
-    body: "## Text and Image"
+    body: >-
+      ## Create Custom Capture Forms And Manage Leads With Integrated IDX
+      Through IHomefinder
+
+
+      Unique forms designed to route through popular CRMs of your choice or use our integrated CRM through IHomefinder
     form_body: >-
       ### Send us a message
 
@@ -65,10 +70,11 @@ home_sections:
         button_link: /idx/?path=/listing-report&id=2641111
     background_color: "#f8f8f8"
   - type: team_section
-    body: |-
-      ## Our Team
+    body: >-
+      ## Meet Our Agents
 
-      This is the team section
+
+      Create unlimited team members with their own profile to display their contact information.
     background_color: "#ffffff"
     body_color: "#000000"
 ---
