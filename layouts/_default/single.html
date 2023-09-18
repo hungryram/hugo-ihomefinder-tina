@@ -28,6 +28,10 @@
 {{ partial "page-builder/featured-panel" (dict "sectionData" .) }}
 {{ end }}
 
+{{ if eq "code" .type }}
+{{ partial "page-builder/code" (dict "sectionData" .) }}
+{{ end }}
+
 {{ if eq "contact_page" .type }}
 <div class="section" style="{{ if .background_color }}background-color:{{ .background_color }}{{ end }};{{ if .Params.background_image }}background-image:url({{ .Params.background_image}}){{ end }}">
     <div class="container mx-auto">
