@@ -665,7 +665,7 @@ collections:
 
 # TESTIMONIALS
   - name: "Testimonials" # Used in routes, e.g., /admin/collections/blog
-    label: "testimonials" # Used in the UI
+    label: "Testimonials" # Used in the UI
     editor:
       preview: false
     folder: "/content/testimonials" # The path to the folder where the documents are stored
