@@ -2,10 +2,15 @@
 home_sections:
   - headingColor: "#eeeeee"
     bodyColor: "#ffffff"
-    body: "# Modern Luxury Home"
+    body: >-
+      # Your All-in-One Real Estate Powerhouse
+
+
+      Vesper is the ultimate solution for real estate companies and professionals. It is the biggest all-in-one solution built for security, speed, and flexibility.
     heading: ""
     color: rgba(0, 0, 0, 0.6)
     button_link: ""
+    universal_quick_search: true
     button: ""
     overlayColor: rgba(0, 0, 0, 0.37)
     enable_quick_search: true
