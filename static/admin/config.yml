@@ -521,7 +521,14 @@ collections:
               - {label: "Background Color", name: "background_color", widget: "color", required: false}
               - {label: "Body Color", name: "body_color", widget: "color", required: false}
               - {label: "Enable IDX Form", name: "idx_form", widget: "boolean", required: false}
-          - {label: "Code", name: "code", widget: "text", required: false}
+          - label: "Code"
+            name: "code"
+            widget: "object"
+            fields:
+              - label: 'Code'
+                name: 'code'
+                widget: 'text'
+                required: false
           - label: "Text and Image"
             name: "text-and-image"
             widget: "object"
