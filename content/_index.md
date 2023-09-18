@@ -1,7 +1,6 @@
 ---
 home_sections:
   - headingColor: "#eeeeee"
-    full_screen: false
     bodyColor: "#ffffff"
     body: "# Modern Luxury Home"
     heading: ""
@@ -12,6 +11,7 @@ home_sections:
     enable_quick_search: true
     type: hero
     image: /images/uploads/h6-slider-1-img-1.jpg
+    full_screen: false
   - body: >-
       ## About Our Team
 
@@ -55,4 +55,11 @@ home_sections:
       This is the team section
     background_color: "#ffffff"
     body_color: "#000000"
+  - type: text_and_form
+    body: "## Text and Image"
+    form_body: >-
+      ### Send us a message
+
+
+      Please fill out the form below and we'll reach out to you as soon as possible!
 ---
