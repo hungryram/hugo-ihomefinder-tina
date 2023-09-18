@@ -5,14 +5,14 @@ footer_overlay: rgba(0, 0, 0, 0.88)
 footer_background_color: ""
 footer_heading_color: "#ffffff"
 footer_text_color: "#dddddd"
-about: "BRe #234234234"
+about: |-
+  BRe #234234234
+  Get your website built on a flexible platform.
 disclaimer: The content and data provided on this website are intended for
   informational purposes only. While we make every effort to ensure its accuracy
   and currency, we encourage our visitors to independently verify the
   information. We cannot guarantee the accuracy or comprehensiveness of the
   materials, including text, graphics, links, or other items contained herein.
-  For a more detailed explanation, please refer to our comprehensive disclaimer.
-  Your understanding is greatly appreciated.
 enable_realtor_logo: true
 enable_equal_housing_logo: true
 enable_mls_logo: true
