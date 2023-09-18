@@ -51,8 +51,8 @@ home_sections:
 
 
       Please fill out the form below and we'll reach out to you as soon as possible!
-    background_image: /images/uploads/la.jpg
-    background_image_overlay: rgba(0, 0, 0, 0.78)
+    background_image: /images/uploads/venti-views-chrdevkfdbw-unsplash.jpg
+    background_image_overlay: rgba(0, 0, 0, 0.58)
     body_color: "#fff"
     form_background_color: "#ffffff"
   - type: featured_Panel

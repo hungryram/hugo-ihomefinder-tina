@@ -21,12 +21,14 @@ nav_items:
       - label: Blog
         path: /blog
       - label: Offices
-        path: /offices
+        path: /office
       - label: Team
         path: /team
   - label: Contact
     path: /contact
-  - label: Office
-    path: /office
+  - label: Sellers
+    sub_items:
+      - label: Sell My House
+        path: /sell-my-house
 call_to_action_text: My Account
 call_to_action_link: /property-organizer

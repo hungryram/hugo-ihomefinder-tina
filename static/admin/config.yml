@@ -312,6 +312,7 @@ collections:
                   - {label: "Body", name: "body", widget: "markdown", required: false}
                   - {label: "Background Color", name: "background_color", widget: "color", required: false}
                   - {label: "Body Color", name: "body_color", widget: "color", required: false}
+              - {label: "Code", name: "code", widget: "text", required: false}
               - label: "Text and Image"
                 name: "text-and-image"
                 widget: "object"
@@ -520,6 +521,7 @@ collections:
               - {label: "Background Color", name: "background_color", widget: "color", required: false}
               - {label: "Body Color", name: "body_color", widget: "color", required: false}
               - {label: "Enable IDX Form", name: "idx_form", widget: "boolean", required: false}
+          - {label: "Code", name: "code", widget: "text", required: false}
           - label: "Text and Image"
             name: "text-and-image"
             widget: "object"
@@ -556,8 +558,8 @@ collections:
                 name: "body_text_color"
                 widget: "color"
                 required: false
-      - {label: "Title Tag", name: "title_tag", widget: "string"}
-      - {label: "Meta Description", name: "meta_description", widget: "text"}
+      - {label: "Title Tag", name: "title_tag", widget: "string", required: false}
+      - {label: "Meta Description", name: "meta_description", widget: "text", required: false}
 
 # BLOG
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
@@ -578,8 +580,8 @@ collections:
       - {label: "Image Alt Tag", name: "alt_tag", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Is Post", name: "is_post", widget: "hidden", default: true, required: false}
-      - {label: "Title Tag", name: "title_tag", widget: "string"}
-      - {label: "Meta Description", name: "meta_description", widget: "text"}
+      - {label: "Title Tag", name: "title_tag", widget: "string", required: false}
+      - {label: "Meta Description", name: "meta_description", widget: "text", required: false}
 
 # LEGAL
   - name: "legal" # Used in routes, e.g., /admin/collections/blog
@@ -593,8 +595,8 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Update Date", name: "last_update", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Title Tag", name: "title_tag", widget: "string"}
-      - {label: "Meta Description", name: "meta_description", widget: "text"}
+      - {label: "Title Tag", name: "title_tag", widget: "string", required: false}
+      - {label: "Meta Description", name: "meta_description", widget: "text", required: false}
 
 # TEAM
   - name: "team"
@@ -626,8 +628,8 @@ collections:
           - {label: "Direct Number", name: "direct", widget: "string", required: false}
           - {label: "Office Number", name: "office", widget: "string", required: false}
           - {label: "email", name: "email", widget: "string", required: false}
-      - {label: "Title Tag", name: "title_tag", widget: "string"}
-      - {label: "Meta Description", name: "meta_description", widget: "text"}
+      - {label: "Title Tag", name: "title_tag", widget: "string", required: false}
+      - {label: "Meta Description", name: "meta_description", widget: "text", required: false}
 
 # OFFICE
   - name: "office"
@@ -660,8 +662,8 @@ collections:
           - {label: "Direct Number", name: "direct", widget: "string", required: false}
           - {label: "Office Number", name: "office", widget: "string", required: false}
           - {label: "email", name: "email", widget: "string", required: false}
-      - {label: "Title Tag", name: "title_tag", widget: "string"}
-      - {label: "Meta Description", name: "meta_description", widget: "text"}
+      - {label: "Title Tag", name: "title_tag", widget: "string", required: false}
+      - {label: "Meta Description", name: "meta_description", widget: "text", required: false}
 
 # TESTIMONIALS
   - name: "Testimonials" # Used in routes, e.g., /admin/collections/blog
