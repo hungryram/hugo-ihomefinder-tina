@@ -1,5 +1,5 @@
 <div>
-    <div class="relative isolate overflow-hidden pt-14 {{ if index .sectionData "full_screen" }}h-screen{{else}}h-[70vh]{{end}}">
+    <div class="relative isolate overflow-hidden {{ if index .sectionData "full_screen" }}h-screen{{else}}h-[70vh]{{end}}">
         {{ $color := index .sectionData "overlayColor" }}
         {{ if $color }}
         <div class="absolute left-0 right-0 bottom-0 top-0" style="background-color: {{ $color | safeCSS }}"></div>
