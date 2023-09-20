@@ -8,21 +8,21 @@
           <ul class="flex justify-end space-x-6">
             {{ if $profile.contact_information.contact.direct }}
             <li>
-              <a href="tel:{{ $profile.contact_information.contact.direct }}" aria-label="Call Direct">
+              <a href="tel:{{ $profile.contact_information.contact.direct }}" aria-label="Call Direct {{ $profile.contact_information.contact.direct }}">
                 <span class="font-medium">Direct:</span> {{ $profile.contact_information.contact.direct }}
               </a>
             </li>
             {{ end }}
             {{ if $profile.contact_information.contact.office }}
             <li class="hidden md:block">
-              <a href="tel:{{ $profile.contact_information.contact.office }}" aria-label="Call Office">
+              <a href="tel:{{ $profile.contact_information.contact.office }}" aria-label="Call Office {{ $profile.contact_information.contact.office }}">
                 <span class="font-medium">Office:</span> {{ $profile.contact_information.contact.office }}
               </a>
             </li>
             {{ end }}
             {{ if $profile.contact_information.contact.email }}
             <li>
-              <a href="mailto:{{ $profile.contact_information.contact.email }}" aria-label="Email">
+              <a href="mailto:{{ $profile.contact_information.contact.email }}" aria-label="Email {{ $profile.contact_information.contact.email }}">
                 <span class="font-medium">Email:</span> {{ $profile.contact_information.contact.email }}
               </a>
             </li>
