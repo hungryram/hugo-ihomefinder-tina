@@ -221,6 +221,10 @@ collections:
                     name: "image"
                     widget: "image"
                     required: false
+                  - label: "Alt Text"
+                    name: "alt_text"
+                    widget: "string"
+                    required: false
               - label: "Featured Grid"
                 name: "featured_grid"
                 widget: "list"
@@ -337,6 +341,10 @@ collections:
                     name: "image"
                     widget: "image"
                     required: false
+                  - label: "Alt Text"
+                    name: "alt_text"
+                    widget: "string"
+                    required: false
                   - label: "Background Image"
                     name: "background_image"
                     widget: "image"
@@ -369,6 +377,7 @@ collections:
         required: false
       - { name: "banner_image_overlay", label: "Banner Image Overlay", widget: "color", required: false, enableAlpha: true }
       - { name: "banner_image", label: "Banner Image", widget: "image", required: false }
+      - { name: "alt_text", label: "Alt Text", widget: "string", required: false }
       - label: "Page Builder"
         name: "page_builder"
         widget: "list"
@@ -422,6 +431,10 @@ collections:
                 name: "image"
                 widget: "image"
                 required: false
+              - label: "Alt Text"
+                name: "alt_text"
+                widget: "string"
+                required: false
           - label: "Featured Grid"
             name: "featured_grid"
             widget: "list"
@@ -429,6 +442,7 @@ collections:
               - {label: "Body", name: "body", widget: "markdown", required: false}
               - {label: "Column Number", name: "column_number", widget: "number", min: 2, max: 4, value_type: int, required: false}
               - {label: "Background Image", name: "background_image", widget: "image", required: false}
+              - {label: "Alt Text", name: "alt_text", widget: "string", required: false}
               - {label: "Background Color", name: "background_color", widget: "color", required: false}
               - {label: "Body Color", name: "body_color", widget: "color", required: false}
               - label: "Featured Blocks"
@@ -447,8 +461,9 @@ collections:
               - {label: "Body", name: "body", widget: "markdown", required: false}
               - {label: "Enable Slider", name: "slider", widget: "boolean", required: false}
               - {label: "Column Number", name: "column_number", widget: "number", min: 2, max: 4, value_type: int, required: false}
-              - {label: "Background Image", name: "background_image", widget: "image", required: false}
               - {label: "Background Color", name: "background_color", widget: "color", required: false}
+              - {label: "Background Image", name: "background_image", widget: "image", required: false}
+              - {label: "Alt Text", name: "alt_text", widget: "string", required: false}
               - {label: "Body Color", name: "body_color", widget: "color", required: false}
               - label: "Featured Blocks"
                 name: "featured_blocks"
@@ -484,6 +499,7 @@ collections:
               - {label: "Background Color", name: "background_color", widget: "color", required: false}
               - {label: "Background Image Overlay", name: "background_image_overlay", widget: "color", required: false, enableAlpha: true}
               - {label: "Background Image", name: "background_image", widget: "image", required: false}
+              - {label: "Alt Text", name: "alt_text", widget: "string", required: false}
               - {label: "Body Color", name: "body_color", widget: "color", required: false}
           - label: "Quick Search"
             name: "quick_search_idx"
@@ -553,6 +569,10 @@ collections:
                 name: "image"
                 widget: "image"
                 required: false
+              - label: "Alt Text"
+                name: "alt_text"
+                widget: "string"
+                required: false
               - label: "Background Image"
                 name: "background_image"
                 widget: "image"
@@ -581,6 +601,7 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - { name: "banner_image_overlay", label: "Banner Image Overlay", widget: "color", required: false, enableAlpha: true }
       - { name: "banner_image", label: "Banner Image", widget: "image", required: false }
+      - { name: "alt_text", label: "Alt Text", widget: "string", required: false }
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
@@ -650,6 +671,7 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "office"}
       - { name: "banner_image_overlay", label: "Banner Image Overlay", widget: "color", required: false, enableAlpha: true }
       - { name: "banner_image", label: "Banner Image", widget: "image", required: false }
+      - { name: "alt_text", label: "Alt Text", widget: "string", required: false }
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}

@@ -4,7 +4,7 @@
         {{ if $color }}
         <div class="absolute left-0 right-0 bottom-0 top-0" style="background-color: {{ $color | safeCSS }}"></div>
         {{ end }}
-      <img src="{{ index .sectionData "image" }}" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover">
+      <img src="{{ index .sectionData "image" }}" alt="{{ index .sectionData "alt_text" }}" class="absolute inset-0 -z-10 h-full w-full object-cover">
       <div class="mx-auto max-w-2xl items-center flex h-full relative z-10">
         <div class="text-center content">
           <h1 class="text-4xl tracking-tight sm:text-6xl" style="color:{{ index .sectionData "headingColor" }}">{{ index .sectionData "heading" }}</h1>

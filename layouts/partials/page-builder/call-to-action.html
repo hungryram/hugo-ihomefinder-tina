@@ -3,7 +3,7 @@
       <div class="md:flex items-center gap-10 md:space-y-0 space-y-10 {{ if index .sectionData "image" }}{{ else }}justify-center text-center{{ end }} {{ if index .sectionData "reverse_column" }} flex-row-reverse {{ end }}">
         {{ if index .sectionData "image"}}
         <div class="md:w-3/5">
-          <img src="{{ index .sectionData "image" }}" alt="{{ index .sectionData "imageAlt" }}">
+          <img src="{{ index .sectionData "image" }}" alt="{{ index .sectionData "alt_text" }}">
         </div>
         {{ end }}
         <div class="{{ if index .sectionData "image" }}md:w-w-2/5{{ else }}md:w-3/5{{ end }}">
