@@ -712,3 +712,10 @@ collections:
       - {label: "Name", name: "title", widget: "string", required: false}
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown", required: false}
+
+# IDX
+  - name: "idx_admin" # Used in routes, e.g., /admin/collections/blog
+    label: "IDX Admin" # Used in the UI
+    editor:
+      preview: false
+    hint: "[IDX Admin](https://ihomefinder.com)"
