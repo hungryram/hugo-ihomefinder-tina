@@ -717,7 +717,7 @@ collections:
   - name: "idx_admin" # Used in routes, e.g., /admin/collections/blog
     label: "IDX Admin" # Used in the UI
     folder: "/content/idx-admin" # The path to the folder where the documents are stored
-    create: false
+    create: true
     editor:
       preview: false
     fields: # The fields for each document, usually in front matter
