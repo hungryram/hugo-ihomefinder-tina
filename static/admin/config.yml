@@ -717,8 +717,8 @@ collections:
   - name: "idx_admin" # Used in routes, e.g., /admin/collections/blog
     label: "IDX Admin" # Used in the UI
     folder: "/content/idx-admin" # The path to the folder where the documents are stored
-    create: true
+    create: false
     editor:
       preview: false
     fields: # The fields for each document, usually in front matter
-      - {label: "Name", name: "title", widget: "string", required: false, hint: "(IDX Admin)[https://ihomefinder.com]"}
+      - {label: "Client ID", name: "title", widget: "string", required: false, hint: "Click here to open IDX admin"}
