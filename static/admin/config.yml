@@ -133,7 +133,10 @@ collections:
             required: false
           - label: Call to Action Link
             name: call_to_action_link
-            widget: string
+            widget: relation
+            collection: pages
+            value_fields: title
+            search_fields: title
             required: false
       - name: "footer" # This is the file name without the extension
         label: "Footer" # Label for the file in the CMS
