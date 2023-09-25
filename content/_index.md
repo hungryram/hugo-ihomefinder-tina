@@ -79,4 +79,5 @@ home_sections:
       Create unlimited team members with their own profile to display their contact information.
     background_color: "#ffffff"
     body_color: "#000000"
+title: Home Page
 ---
