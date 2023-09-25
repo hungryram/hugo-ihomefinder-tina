@@ -62,6 +62,7 @@ home_sections:
       - body: "### Los Angeles"
         image: /images/uploads/la.jpg
         button_link: /idx?path=/listing-report&id=2641109
+        alt_text: los angeles city
       - body: "### Orange County"
         image: /images/uploads/oc.jpg
         button_link: /idx/?path=/listing-report&id=2641110
@@ -69,6 +70,7 @@ home_sections:
         image: /images/uploads/pexels-soly-moses-14636840.jpg
         button_link: /idx/?path=/listing-report&id=2641111
     background_color: "#f8f8f8"
+    alt_text: test
   - type: team_section
     body: >-
       ## Meet Our Agents
