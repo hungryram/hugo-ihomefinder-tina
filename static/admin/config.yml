@@ -135,9 +135,9 @@ collections:
             name: call_to_action_link
             widget: "relation"
             collection: "pages"
-            search_fields: ["name.first", "twitterHandle"]
+            search_fields: ["title", "twitterHandle"]
             value_field: "title"
-            display_fields: ["twitterHandle", "followerCount"]
+            display_fields: ["title", "followerCount"]
             required: false
       - name: "footer" # This is the file name without the extension
         label: "Footer" # Label for the file in the CMS
