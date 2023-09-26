@@ -29,9 +29,9 @@ nav_items:
       - label: Team
         path: /team
   - label: Contact
-    path: contact-us
-    external_url: /listings
-    new_tab: true
+    path: contact
+    external_url: /featured-listings
+    new_tab: false
 call_to_action_text: My Account
 call_to_action_external: /contact
 call_to_action_link: search

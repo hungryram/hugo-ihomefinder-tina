@@ -68,7 +68,7 @@
           </ul>
         </div>
         {{ else }}
-        <a href="{{ .path }}" class="text-sm font-semibold leading-6 text-white py-4">{{ .label }}</a>
+        <a href="{{ if .path }}{{ .path | absURL }}{{ else }}{{ .external_url }}{{ end }}" {{ if .new_tab }}target="_blank"{{ end }} class="text-sm font-semibold leading-6 text-white py-4">{{ .label }}</a>
         {{ end }}
         {{ end }}
         <!-- End Hugo Template Logic for Menu -->

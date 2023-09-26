@@ -1,4 +1,6 @@
 ---
+slug: '/'
+title: 'Home'
 home_sections:
   - headingColor: "#eeeeee"
     bodyColor: "#ffffff"
