@@ -229,6 +229,7 @@ collections:
                   - label: "Heading Color"
                     name: "headingColor"
                     widget: "color"
+                    required: false
                   - label: "Body Color"
                     name: "bodyColor"
                     widget: "color"
