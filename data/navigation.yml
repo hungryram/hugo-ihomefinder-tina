@@ -13,11 +13,21 @@ nav_items:
         path: featured-listings
       - label: Search
         path: search
+      - label: Open Home Listings
+        path: open-home-listings
+      - path: pending-featured-listings
+        label: Pending Featured Listings
+      - path: email-alerts
+        label: Email Alerts
+      - path: markets
+        label: Markets
     path: ""
   - label: Sellers
     sub_items:
       - label: Sell My House
         path: sell-my-house
+      - label: Valuation
+        path: valuation
   - label: Resources
     sub_items:
       - label: Testimonials
@@ -32,6 +42,8 @@ nav_items:
       - label: Team
         path: /team
         external_url: /team
+      - label: Mortgage Calculator
+        path: mortgage-calculator
   - label: Contact
     path: contact
     external_url: ""
