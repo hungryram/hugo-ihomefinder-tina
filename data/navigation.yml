@@ -31,4 +31,6 @@ nav_items:
   - label: Contact
     path: /contact
 call_to_action_text: My Account
+call_to_action_external: /contact
 call_to_action_link: pending-featured-listings
+new_tab: true
