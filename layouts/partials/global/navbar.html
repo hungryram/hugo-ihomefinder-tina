@@ -75,7 +75,7 @@
       </div>
       
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="{{ .Site.Data.navigation.call_to_action_link | absURL }}" class="primary-button">{{ .Site.Data.navigation.call_to_action_text }}</a>
+        <a href="{{ if .Site.Data.navigation.call_to_action_link }} {{ .Site.Data.navigation.call_to_action_link | absURL }}{{ else }}{{ .Site.Data.navigation.call_to_external }}{{ end }}" class="primary-button" {{ if .Site.Data.navigation.new_tab }}target="_blank"{{ end }}>{{ .Site.Data.navigation.call_to_action_text }}</a>
       </div>
     </nav>
     <!-- Mobile Menu -->
