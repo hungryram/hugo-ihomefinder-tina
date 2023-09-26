@@ -88,6 +88,11 @@ collections:
           - { name: "branding_logo", label: "Logo", widget: "image", required: false }
           - { name: "branding_favicon", label: "Favicon", widget: "image", required: false }
           - { name: "branding_logo_width", label: "Logo Width", widget: "number", required: false }
+      - name: "form" # This is the file name without the extension
+        label: "Form" # Label for the file in the CMS
+        file: "data/form.yml" # Path to your appearance YAML file
+        fields:
+          - { name: "form_disclaimer", label: "Form Disclaimer", widget: "markdown", required: false }
       - file: data/navigation.yml
         label: Navigation
         name: navigation
