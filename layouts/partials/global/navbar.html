@@ -62,7 +62,7 @@
           <ul class="dropdown-menu absolute hidden z-50 bg-white shadow-lg w-60 top-14 left-0 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300 ease-in-out group-hover:duration-500 group-hover:ease-in-out animate-slide-in">
             {{ range .sub_items }}
             <li class="border-b last:border-b-0 hover:bg-gray-300 px-2 transition-all duration-500">
-              <a href="{{ .path }}" class="text-sm leading-6 !text-black block hover:pl-1 py-3 transition-all duration-500">{{ .label }}</a>
+              <a href="{{ if .path }}{{ .path | absURL }}{{ else }}{{ .external_url }}{{ end }}" {{ if .new_tab }}target="_blank"{{ end }} class="text-sm leading-6 !text-black block hover:pl-1 py-3 transition-all duration-500">{{ .label }}</a>
             </li>
             {{ end }}
           </ul>
@@ -105,20 +105,20 @@
             <ul class="dropdown-menu z-50 w-60 top-0 left-0 translate-x-0 hidden" aria-hidden="true">
               {{ range .sub_items }}
               <li class="border-b last:border-b-0 hover:bg-gray-300 px-2">
-                <a href="{{ .path }}" class="text-sm font-semibold leading-6 block hover:pl-1 py-3">{{ .label }}</a>
+                <a href="{{ if .path }}{{ .path | absURL }}{{ else }}{{ .external_url }}{{ end }}" {{ if .Site.Data.navigation.new_tab }}target="_blank"{{ end }} class="text-sm font-semibold leading-6 block hover:pl-1 py-3">{{ .label }}</a>
               </li>
               {{ end }}
             </ul>
           </li>
           {{ else }}
           <li class="py-4">
-            <a href="{{ .path }}" class="text-sm font-semibold leading-6 text-black py-4">{{ .label }}</a>
+            <a href="{{ if .path }}{{ .path | absURL }}{{ else }}{{ .external_url }}{{ end }}" {{ if .Site.Data.navigation.new_tab }}target="_blank"{{ end }} class="text-sm font-semibold leading-6 text-black py-4">{{ .label }}</a>
           </li>
           {{ end }}
           {{ end }}
           <!-- End Hugo Template Logic for Mobile Menu -->
           <li class="mt-10">
-            <a href="{{ .Site.Data.navigation.call_to_action_link }}" class="primary-button !block !text-center">{{ .Site.Data.navigation.call_to_action_text }}</a>
+            <a href="{{ if .Site.Data.navigation.call_to_action_link }} {{ .Site.Data.navigation.call_to_action_link | absURL }}{{ else }}{{ .Site.Data.navigation.call_to_external }}{{ end }}" class="primary-button !block !text-center" {{ if .Site.Data.navigation.new_tab }}target="_blank"{{ end }}>{{ .Site.Data.navigation.call_to_action_text }}</a>
           </li>
         </ul>
       </nav>
