@@ -6,7 +6,7 @@ mobile_icon_color: "#000"
 nav_items:
   - sub_items: []
     label: Home
-    path: /
+    path: _index
   - label: Buyers
     sub_items:
       - label: Listings
@@ -29,8 +29,8 @@ nav_items:
       - label: Team
         path: /team
   - label: Contact
-    path: /contact
+    path: contact-us
 call_to_action_text: My Account
 call_to_action_external: /contact
-call_to_action_link: pending-featured-listings
+call_to_action_link: search
 new_tab: false
