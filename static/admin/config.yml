@@ -378,7 +378,9 @@ collections:
                   - label: "Body Text Color"
                     name: "body_text_color"
                     widget: "color"
-                    required: fal
+                    required: false
+
+
 # CONTENT PAGES
   - name: "pages"
     label: "Pages" # Used in the UI
