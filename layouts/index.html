@@ -1,6 +1,6 @@
 {{ partial "global/head" . }}
 {{ partial "global/navbar" . }}
-{{ range .Params.page_builder }}
+{{ range .Site.Data.home.home_sections }}
 
 {{ if eq "text-and-image" .type }}
 {{ partial "page-builder/call-to-action" (dict "sectionData" .) }}
