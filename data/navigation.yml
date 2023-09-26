@@ -30,6 +30,8 @@ nav_items:
         path: /team
   - label: Contact
     path: contact-us
+    external_url: /listings
+    new_tab: true
 call_to_action_text: My Account
 call_to_action_external: /contact
 call_to_action_link: search
