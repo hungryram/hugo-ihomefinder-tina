@@ -6,7 +6,7 @@ mobile_icon_color: "#000"
 nav_items:
   - sub_items: []
     label: Home
-    path: _index
+    path: /
   - label: Buyers
     sub_items:
       - label: Listings
