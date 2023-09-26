@@ -12,28 +12,33 @@
             <div class="md:w-1/2">
                 <div class="content">
                     <div class="text-base leading-7 text-gray-700 lg:max-w-lg border-b pb-10">
-                      <p class="text-base font-semibold leading-7 accent">{{ .Params.position }}</p>
-                      <h1 class="mt-2 text-3xl tracking-tight text-gray-900 sm:text-4xl">{{ .Params.title }}</h1>
+                      <h2 class="mt-2 text-3xl tracking-tight text-gray-900 sm:text-4xl">{{ .Params.title }}</h2>
                       <div class="max-w-xl mt-10">
                           {{ .Content }}
                       </div>
                     </div>
                     <dl class="mt-10 grid grid-cols-2 gap-5 content">
+                      {{ if .Params.contact.email }}
                       <div>
                         <dt class="text-sm font-semibold leading-6 text-gray-600">Email</dt>
                         <dd class="leading-10 tracking-tight text-gray-900"><a href="mailto:{{ .Params.contact.email }}">{{ .Params.contact.email }}</a></dd>
                       </div>
+                      {{ end }}
+                      {{ if .Params.contact.direct }}
                       <div>
                         <dt class="text-sm font-semibold leading-6 text-gray-600">Phone</dt>
                         <dd class="leading-10 tracking-tight text-gray-900"><a href="tel:{{ .Params.contact.direct }}">{{ .Params.contact.direct }}</a></dd>
                       </div>
+                      {{ end }}
+                      {{ if .Params.contact.office }}
                       <div>
                         <dt class="text-sm font-semibold leading-6 text-gray-600">Office</dt>
                         <dd class="leading-10 tracking-tight text-gray-900"><a href="tel:{{ .Params.contact.office }}">{{ .Params.contact.office }}</a></dd>
                       </div>
+                      {{ end }}
                       <div>
                         <dt class="text-sm font-semibold leading-6 text-gray-600">Address</dt>
-                        <dd class="leading-10 tracking-tight text-gray-900">{{ .Params.address.street }}</dd>
+                        <dd class="leading-10 tracking-tight text-gray-900">{{ .Params.address.street }} {{ .Params.address.city }} {{ .Params.address.state }} {{ index .Params.address "post-code" }}</dd>
                       </div>
                     </dl>
                   </div>
