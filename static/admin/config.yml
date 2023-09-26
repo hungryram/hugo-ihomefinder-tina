@@ -131,13 +131,21 @@ collections:
             name: call_to_action_text
             widget: string
             required: false
+          - label: Call to Action External Link
+            name: call_to_action_external
+            widget: string
+            required: false
           - label: Call to Action Link
             name: call_to_action_link
             widget: "relation"
             collection: "pages"
-            search_fields: ["title", "twitterHandle"]
+            search_fields: ["title"]
             value_field: "{{slug}}"
-            display_fields: ["title", "followerCount"]
+            display_fields: ["title"]
+            required: false
+          - label: Open in a new tab
+            name: new_tab
+            widget: boolean
             required: false
       - name: "footer" # This is the file name without the extension
         label: "Footer" # Label for the file in the CMS
