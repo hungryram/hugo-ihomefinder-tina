@@ -227,11 +227,11 @@
                                 class="w-full py-2 px-3 border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
                                 rows="5" placeholder="Your Message" name="Message"></textarea>
                         </div>
+                        <div class="col-span-6 content text-sm">
+                            {{ $.Site.Data.form.form_disclaimer | markdownify }}
+                        </div>
                         <div class="col-span-2">
                             <button class="primary-button formSubmit" type="submit">Send Email</button>
-                        </div>
-                        <div class="col-span-2 content">
-                            {{ $.Site.Data.appearance.form.form_disclaimer | markdownify }}
                         </div>
                     </form>
                         {{ end }}
