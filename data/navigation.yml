@@ -10,29 +10,33 @@ nav_items:
   - label: Buyers
     sub_items:
       - label: Listings
-        path: /featured-listings
+        path: featured-listings
       - label: Search
-        path: /search
-    path: /
+        path: search
+    path: ""
   - label: Sellers
     sub_items:
       - label: Sell My House
-        path: /sell-my-house
+        path: sell-my-house
   - label: Resources
     sub_items:
       - label: Testimonials
         path: /testimonials
+        external_url: /testimonials
       - label: Blog
         path: /blog
+        external_url: /blog
       - label: Offices
         path: /office
+        external_url: /offices
       - label: Team
         path: /team
+        external_url: /team
   - label: Contact
     path: contact
-    external_url: /featured-listings
+    external_url: ""
     new_tab: false
 call_to_action_text: My Account
-call_to_action_external: /contact
-call_to_action_link: search
+call_to_action_external: ""
+call_to_action_link: property-organizer
 new_tab: false
