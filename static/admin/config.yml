@@ -119,7 +119,7 @@ collections:
             widget: list
             fields:
               - { label: Label, name: label, widget: string }
-              - { label: Path, name: path, widget: relation, display_fields: ["title"], value_field: "{{slug}}", search_fields: ["title"], required: false }
+              - { label: Path, name: path, widget: relation, display_fields: ["title"], value_field: "{{slug}}", search_fields: ["title"], collection: pages, required: false }
               - { label: External URL, name: external_url, widget: string, required: false }
               - { label: New Tab, name: new_tab, widget: boolean, required: false }
               - label: Submenu Items
